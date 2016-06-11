@@ -1,0 +1,37 @@
+// *  *  *  *  *  *  LOGO  *  *  *  *  *  * //
+
+.main-menu-logo {
+  display: block;
+  float: left;
+  line-height: $height-header;
+  margin: 0 20px 0 0;
+}
+
+  .logo {
+    color: #c8c8c8;
+    font-size: 27px;
+    font-weight: 100;
+    letter-spacing: 0.7px;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+    // .active {
+    //   .logo-text-skate {
+    //     color: $color-action;
+    //   }
+    // }
+
+    .logo-text-scenes {
+      color: #fff;
+      // font-weight: 500;
+      text-transform: uppercase;
+    }
+
+// @include breakpoint($breakpoint-content-max) {
+//   .logo-divider {
+//     display: none;
+//   }
+// }

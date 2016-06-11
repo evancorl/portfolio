@@ -1,0 +1,8 @@
+// *  *  *  *  *  *  POST BODY  *  *  *  *  *  * //
+
+.post-body {
+  @include box-sizing(border-box);
+  clear: both;
+  margin-bottom: 15px;
+  width: 100%;
+}

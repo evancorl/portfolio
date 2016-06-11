@@ -1,0 +1,217 @@
+// *  *  *  *  *  *  RESET NATIVE ELEMENTS  *  *  *  *  *  * //
+
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(0,0,0,0); // Safari mobile
+
+  &:focus,
+  &:focus * {
+      outline: none;
+  }
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background: #e4e4e4;
+  color: #777;
+  font-family: $font-primary;
+  font-size: 14px;
+  font-weight: 400;
+  height: 100%;
+  letter-spacing: .25px;
+  max-width: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+  width: 100%;
+  word-wrap: break-word; // Internet Explorer 5.5+
+}
+
+img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+a {
+  color: $color-action;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  & img {
+    border: none;
+  }
+}
+
+ul,
+li {
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+// h1,
+// h3 {
+//   font-weight: 500;
+// }
+
+// h2 {
+//   font-weight: 400;
+// }
+
+//   h1,
+//   h2 {
+//     border-bottom: 1px solid #d8d8d8;
+//     font-size: 23px;
+//     line-height: 23px;
+//     letter-spacing: .6px;
+//     margin: 0 0 20px 0;
+//     padding: 0 0 12.5px 1px;
+
+//     hr {
+//       padding: 5px 0;
+//     }
+//   }
+
+//   h1,
+//   h2,
+//   h3 {
+//     @include box-sizing(border-box);
+//     clear: both;
+//     color: #444;
+//     overflow: hidden;
+//     width: 100%;
+
+//     & a {
+//       color: inherit;
+//     }
+//   }
+
+p {
+  margin: 0 0 20px 0;
+}
+
+strong {
+  font-weight: 500;
+}
+
+div,
+ul,
+li,
+form,
+header {
+  @extend .clearfix;
+}
+
+input,
+button {
+  color: #555;
+  font-family: $font-primary;
+  font-size: 14px;
+  padding: 1px;
+
+  // Fixes Firefox padding issue
+  &::-moz-focus-inner {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+input[type="submit"],
+input[type="button"],
+button {
+  @include appearance(none);
+  @include border-radius(2px);
+  background: none;
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+
+  &:hover {
+    color: $color-action;
+  }
+}
+
+input[type="text"] {
+  @include input-placeholder {
+    color: #999;
+    font-weight: 400;
+    opacity: 1;
+  }
+}
+
+  input[type="text"],
+  input[type="password"] {
+    // Override Google autocomplete
+    &:-webkit-autofill {
+      -webkit-text-fill-color: $color-input !important;
+      -webkit-box-shadow: 0 0 0px 1000px white inset;
+    }
+
+    // Hide IE clear button (X)
+    &::-ms-clear {
+      display: none;
+      height: 0;
+      width : 0;
+    }
+  }
+
+textarea {
+  line-height: 23px;
+  padding: 5px 10px 0 10px;
+  resize: vertical;
+}
+
+select {
+  @include border-radius(5px);
+  background: #f8f8f8;
+  border-bottom: 2px solid #c3c3c3;
+  color: #444;
+  font-family: $font-primary;
+  font-size: 14px !important;
+  height: 30px;
+  margin: 0 0 10px 0;
+  padding: 4px; // Does anything?
+  vertical-align: middle;
+
+  // Fix Firefox focus issue
+  &:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+  }
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  cursor: pointer;
+  display: table-cell;
+  float: left;
+  margin: 4px 10px 0 0;
+  vertical-align: middle;
+}
+
+  input[type="checkbox"] {
+    @include appearance(checkbox);
+  }
+
+  input[type="radio"] {
+    @include appearance(radio);
+  }
+
+label {
+  cursor: pointer;
+}

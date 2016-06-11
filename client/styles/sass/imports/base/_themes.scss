@@ -1,0 +1,12 @@
+// *  *  *  *  *  *  THEMES  *  *  *  *  *  * //
+
+@mixin header-dark-theme {
+  background-color: #313131;
+  @include background-image(linear-gradient(to bottom, #313131, #222));
+  border: none;
+}
+
+@mixin header-light-theme {
+  background: #f0f0f0;
+  border-bottom: 2px solid #dadada;
+}

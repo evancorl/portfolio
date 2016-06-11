@@ -1,0 +1,31 @@
+// *  *  *  *  *  *  ACTIVE LINKS  *  *  *  *  *  * //
+
+a.active {
+  color: $color-action !important;
+}
+
+.active-hover {
+  &:hover {
+    color: $color-action;
+    text-decoration: none;
+  }
+}
+
+.active-border {
+  &:hover {
+    color: $color-action;
+    text-decoration: none;
+  }
+
+  &.active {
+    color: $color-action;
+
+    &:after {
+      background-color: $color-action;
+      content: '';
+      display: block;
+      height: 3px;
+      margin-top: -3px;
+    }
+  }
+}

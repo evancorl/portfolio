@@ -1,0 +1,17 @@
+// *  *  *  *  *  *  VARIABLES  *  *  *  *  *  * //
+
+$font-primary: 'Roboto', Helvetica, Arial, sans-serif;
+
+$color-action: #e74c3c;
+$color-input: #555;
+
+$width-content-max: 1050;
+$width-col-left: 63%;
+$width-col-right: 32%;
+$width-col-wide-max: $width-content-max * 1px;
+
+$height-header: 50px;
+
+$breakpoint-content-max: max-width 1010px;
+$breakpoint-single-col: max-width 785px;
+$breakpoint-mobile: max-width 575px;

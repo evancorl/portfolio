@@ -1,0 +1,44 @@
+// * * * * * * FORMS/INPUTS * * * * * *
+
+.text-box {
+  @include border-radius(2px);
+  @include box-sizing(border-box);
+
+  background-color: #fff;
+  border: 1px solid #d0d0d0;
+  color: $color-input;
+  display: block;
+  font-family: $font-primary;
+  font-size: 15px;
+  letter-spacing: .5px;
+  line-height: 35px;
+  margin: 0;
+  max-width: 100%;
+  padding-left: 10px;
+  overflow: hidden;
+  width: 100%;
+
+  input {
+    font-size: inherit;
+    line-height: inherit;
+    width: 100%;
+  }
+
+  .icon {
+    color: #666;
+    float: left;
+    line-height: inherit;
+
+    &:before {
+      display: block;
+      font-size: 15px;
+      line-height: inherit;
+      padding: 0 0 0 10px;
+    }
+  }
+
+  button.icon {
+    float: right;
+    padding-right: 7.5px;
+  }
+}

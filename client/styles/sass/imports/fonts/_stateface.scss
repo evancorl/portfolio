@@ -1,0 +1,83 @@
+// *  *  *  *  *  *  STATEFACE  *  *  *  *  *  * //
+
+[class*="state-"] {
+  &:before {
+    display: inline-block;
+    font-family: 'StateFace';
+    font-style: normal;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1em;
+    speak: none;
+    text-align: center;
+    text-decoration: none !important;
+    text-rendering: optimizeLegibility;
+    text-transform: none;
+    vertical-align: middle;
+
+    overflow: hidden;
+    width: auto;
+  }
+  &:hover {
+    text-decoration: none !important;
+  }
+}
+
+  [class*=" state-"]:before {
+    margin-right: 7px;
+  }
+
+.state-alaska:before { content: 'A' }
+.state-alabama:before { content: 'B' }
+.state-arkansas:before { content: 'C' }
+.state-arizona:before { content: 'D' }
+.state-california:before { content: 'E' }
+.state-colorado:before { content: 'F' }
+.state-connecticut:before { content: 'G' }
+.state-dc:before { content: 'y' }
+.state-delaware:before { content: 'H' }
+.state-florida:before { content: 'I' }
+.state-georgia:before { content: 'J' }
+.state-hawaii:before { content: 'K' }
+.state-iowa:before { content: 'L' }
+.state-idaho:before { content: 'M' }
+.state-illinois:before { content: 'N' }
+.state-indianapolis:before { content: 'O' }
+.state-kansas:before { content: 'P' }
+.state-kentucky:before { content: 'Q' }
+.state-louisiana:before { content: 'R' }
+.state-massachusetts:before { content: 'S' }
+.state-maryland:before { content: 'T' }
+.state-maine:before { content: 'U' }
+.state-michigan:before { content: 'V' }
+.state-minnesota:before { content: 'W' }
+.state-missouri:before { content: 'X' }
+.state-mississippi:before { content: 'Y' }
+.state-montana:before { content: 'Z' }
+.state-north-carolina:before { content: 'a' }
+.state-north-dakota:before { content: 'b' }
+.state-nebraska:before { content: 'c' }
+.state-new-hampshire:before { content: 'd' }
+.state-new-jersey:before { content: 'e' }
+.state-new-mexico:before { content: 'f' }
+.state-nevada:before { content: 'g' }
+.state-new-york:before { content: 'h' }
+.state-ohio:before { content: 'i' }
+.state-oklahoma:before { content: 'j' }
+.state-oregon:before { content: 'k' }
+.state-pennsylvania:before { content: 'l' }
+.state-puerto-rico:before { content: '3' }
+.state-rhode-island:before { content: 'm' }
+.state-south-carolina:before { content: 'n' }
+.state-south-dakota:before { content: 'o' }
+.state-tennessee:before { content: 'p' }
+.state-texas:before { content: 'q' }
+.state-united-states:before { content: 'z' }
+.state-utah:before { content: 'r' }
+.state-virginia:before { content: 's' }
+.state-vermont:before { content: 't' }
+.state-washington:before { content: 'u' }
+.state-wisconsin:before { content: 'v' }
+.state-west-virginia:before { content: 'w' }
+.state-wyoming:before { content: 'x' }

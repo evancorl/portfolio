@@ -1,0 +1,57 @@
+// *  *  *  *  *  *  COLUMN  *  *  *  *  *  * //
+
+.col {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+  .col-left {
+    @extend .col;
+    clear: left;
+    float: left;
+    width: $width-col-left;
+  }
+
+  .col-right {
+    @extend .col;
+    clear: right;
+    float: right;
+    width: $width-col-right;
+  }
+
+  .col-wide {
+    @extend .col;
+    clear: both;
+    max-width: $width-col-wide-max;
+    width: 100%;
+  }
+
+  // .col-center-lg {
+  //   @extend .col;
+  //   clear: both;
+  //   width: 800px;
+  // }
+
+  // .col-center-md {
+  //   @extend .col;
+  //   clear: both;
+  //   width: 620px;
+  // }
+
+  // .col-center-sm {
+  //   @extend .col;
+  //   clear: both;
+  //   width: 320px;
+  // }
+
+@include breakpoint($breakpoint-single-col) {
+  #main-content {
+    .col-left,
+    .col-right {
+      clear: both;
+      float: none;
+      width: 100%;
+    }
+  }
+}

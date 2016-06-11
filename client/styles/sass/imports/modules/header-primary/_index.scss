@@ -1,0 +1,28 @@
+// *  *  *  *  *  *  HEADER PRIMARY  *  *  *  *  *  * //
+
+.header-primary {
+  @include header-dark-theme;
+  display: block;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+  height: $height-header;
+  position: fixed;
+  width: 100%;
+}
+
+  .header-primary-divider {
+    border-left: 1px solid #363636;
+    border-right: 1px solid #1b1b1b;
+    display: block;
+    float: left;
+    height: 30px;
+    margin: 9px 0 0 0;
+  }
+
+@include breakpoint($breakpoint-mobile) {
+  #header-primary {
+    display: none;
+  }
+}
+
+@import './_logo';
+@import './_main-menu';

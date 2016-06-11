@@ -1,0 +1,156 @@
+// *  *  *  *  *  *  FONTELLO  *  *  *  *  *  * //
+
+.icon {
+  &:before {
+    font-family: "icons";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: none !important;
+    text-align: center;
+
+    // For safety - reset parent styles that can break glyph codes
+    font-variant: normal;
+    text-transform: none;
+
+    // Fix buttons height for Twitter Bootstrap
+    line-height: 1em;
+
+    // Font smoothing. That was taken from TWBS
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  &:hover {
+    text-decoration: none !important;
+  }
+}
+
+  .icon-space:before {
+    margin-right: 6px;
+  }
+
+.icon-wheel:before { content:'\e800'; }
+.icon-messages:before { content:'\e801'; }
+.icon-heart:before { content:'\e802'; }
+.icon-star:before { content:'\e803'; }
+.icon-star-empty:before { content:'\e804'; }
+.icon-star-half:before { content:'\e805'; }
+.icon-video:before, 
+  .icon-videos:before { content:'\e806'; }
+.icon-image:before { content:'\e807'; }
+.icon-photo:before { content:'\e808'; }
+.icon-check:before { content:'\e809'; }
+.icon-x:before { content:'\e80a'; }
+.icon-plus:before { content:'\e80b'; }
+.icon-minus:before { content:'\e80c'; }
+.icon-info:before { content:'\e80d'; }
+.icon-home:before { content:'\e80e'; }
+.icon-lock:before { content:'\e80f'; }
+.icon-lock-open:before { content:'\e810'; }
+.icon-pin:before { content:'\e811'; }
+.icon-brand:before,
+  .icon-brands:before,
+  .icon-stores:before { content:'\e812'; }
+.icon-tags:before { content:'\e813'; }
+.icon-bookmark:before { content:'\e814'; }
+.icon-bookmark-empty:before { content:'\e815'; }
+.icon-flag:before,
+  .icon-countries:before { content:'\e816'; }
+.icon-like:before { content:'\e817'; }
+.icon-reply:before { content:'\e818'; }
+.icon-forward:before { content:'\e819'; }
+.icon-pencil:before,
+  .icon-post:before { content:'\e81a'; }
+.icon-edit:before { content:'\e81b'; }
+.icon-comment:before,
+  .icon-forums:before { content:'\e81c'; }
+.icon-warning:before { content:'\e81d'; }
+.icon-direction:before,
+  .icon-regions:before { content:'\e81e'; }
+.icon-trash:before { content:'\e81f'; }
+.icon-page:before { content:'\e820'; }
+.icon-folder:before { content:'\e821'; }
+.icon-folder-open:before { content:'\e822'; }
+.icon-menu:before { content:'\e823'; }
+.icon-gear:before, 
+  .icon-settings:before { content:'\e824'; }
+.icon-calendar:before { content:'\e825'; }
+.icon-submit:before { content:'\e826'; }
+.icon-clock:before { content:'\e827'; }
+.icon-cancel:before { content:'\e828'; }
+.icon-resize:before { content:'\e829'; }
+.icon-zoom-in:before { content:'\e82a'; }
+.icon-zoom-out:before { content:'\e82b'; }
+.icon-down:before { content:'\e82c'; }
+.icon-up:before { content:'\e82d'; }
+.icon-left:before { content:'\e82e'; }
+.icon-right:before { content:'\e82f'; }
+.icon-refresh:before { content:'\e830'; }
+.icon-shuffle:before { content:'\e831'; }
+.icon-exchange:before { content:'\e832'; }
+.icon-inbox:before { content:'\e833'; }
+.icon-cloud:before { content:'\e834'; }
+.icon-crop:before { content:'\e835'; }
+.icon-power:before { content:'\e836'; }
+.icon-circle:before { content:'\e837'; }
+.icon-asterisk:before { content:'\e838'; }
+.icon-credit-card:before { content:'\e839'; }
+.icon-filter:before { content:'\e83a'; }
+.icon-dashboard:before { content:'\e83b'; }
+.icon-vine:before { content:'\e83c'; }
+.icon-play:before, 
+  .icon-feeds:before { content:'\e83d'; }
+.icon-search:before,
+  .icon-browse:before,
+  .icon-shop:before { content:'\e83e'; }
+.icon-question:before { content:'\e83f'; }
+.icon-help:before { content:'\e840'; }
+.icon-monitor:before { content:'\e841'; }
+.icon-mobile:before { content:'\e842'; }
+.icon-earth:before,
+  .icon-scene:before,
+  .icon-scenes:before { content:'\e843'; }
+.icon-save:before { content:'\e844'; }
+.icon-vimeo:before { content:'\e845'; }
+.icon-twitter:before { content:'\e846'; }
+.icon-facebook:before { content:'\e847'; }
+.icon-google:before { content:'\e848'; }
+.icon-instagram:before { content:'\e849'; }
+.icon-users:before { content:'\e84a'; }
+.icon-follow:before,
+  .icon-following:before { content:'\e84b'; }
+.icon-download:before { content:'\e84c'; }
+.icon-upload:before { content:'\e84d'; }
+.icon-key:before { content:'\e84e'; }
+.icon-large:before { content:'\e84f'; }
+.icon-umbrella:before { content:'\e850'; }
+.icon-link:before { content:'\e851'; }
+.icon-marker:before { content:'\e852'; }
+.icon-hashtag:before { content:'\e853'; }
+.icon-building:before,
+  .icon-cities:before { content:'\e854'; }
+.icon-grid:before { content:'\e855'; }
+.icon-wide:before { content:'\e856'; }
+.icon-detail:before { content:'\e857'; }
+.icon-eye:before { content:'\e858'; }
+.icon-eye-off:before { content:'\e859'; }
+.icon-user:before, 
+  .icon-profile:before { content:'\e85a'; }
+.icon-globe:before { content:'\e85b'; }
+.icon-cart:before { content:'\e85c'; }
+.icon-chart:before, 
+  .icon-dashboard:before { content:'\e85d'; }
+.icon-bell:before, 
+  .icon-notifications:before { content:'\e85e'; }
+.icon-wallet:before,
+  .icon-accessories:before { content:'\e85f'; }
+.icon-sock:before,
+  .icon-footwear:before { content:'\e860'; }
+.icon-parts:before { content:'\e861'; }
+.icon-skateboard:before,
+  .icon-boards:before,
+  .icon-skaters:before { content:'\e862'; }
+.icon-shirt:before,
+  .icon-apparel:before { content: '\e863'; }

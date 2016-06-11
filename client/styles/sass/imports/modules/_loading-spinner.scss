@@ -1,0 +1,13 @@
+// *  *  *  *  *  *  LOADING SPINNER  *  *  *  *  *  * //
+
+.loading-spinner-box {
+  @include align-items(center);
+  @include display-flex(inline-flex);
+  @include justify-content(center);
+  height: 100%;
+  width: 100%;
+}
+
+  .loading-spinner {
+    text-align: center;
+  }

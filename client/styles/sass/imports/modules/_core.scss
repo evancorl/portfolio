@@ -1,0 +1,28 @@
+// *  *  *  *  *  *  LAYOUT  *  *  *  *  *  * //
+
+#react-root {
+  height: 100%;
+}
+
+.inner,
+.container {
+  @include box-sizing(border-box);
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.inner {
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.wrapper {
+  display: block;
+  overflow: hidden;
+}

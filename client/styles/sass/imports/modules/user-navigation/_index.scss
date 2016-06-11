@@ -1,0 +1,8 @@
+// *  *  *  *  *  *  USER NAVIGATION  *  *  *  *  *  * //
+
+.user-navigation {
+  height: $height-header;
+}
+
+@import './_header-dashboard';
+@import './_header-user';

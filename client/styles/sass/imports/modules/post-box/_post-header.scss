@@ -1,0 +1,59 @@
+// *  *  *  *  *  *  POST HEADER  *  *  *  *  *  * //
+
+.post-header {
+  margin-bottom: 15px;
+}
+
+  .post-info {
+    position: relative;
+  }
+
+    .post-users {
+      margin-bottom: 5px;
+    }
+
+      .post-username {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 16px;
+      }
+
+    .post-link-list {
+      display: inline-block;
+    }
+
+      .post-link-item {
+        display: inline-block;
+
+        a {
+          color: #888;
+          font-size: 13px;
+        }
+
+        &:before {
+          color: #888;
+          content: '•';
+          cursor: default;
+          padding: 0 10px;
+        }
+
+        &:first-child:before  {
+          content: '';
+          padding: 0;
+        }
+      }
+
+    .post-more-options {
+      bottom: 0;
+      color: #999;
+      cursor: pointer;
+      font-size: 18px;
+      margin-bottom: -10px;
+      padding: 6px 8px;
+      position: absolute;
+      right: 0;
+
+      &:hover {
+        color: #666;
+      }
+    }

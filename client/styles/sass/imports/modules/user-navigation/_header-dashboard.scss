@@ -1,0 +1,47 @@
+// *  *  *  *  *  *  HEADER DASHBOARD  *  *  *  *  *  * //
+
+.header-dashboard,
+.header-sign-up {
+  @include align-items(center);
+  @include display-flex(inline-flex);
+  float: right;
+  height: 100%;
+  margin: 0 0 0 15px;
+}
+
+.header-dashboard {
+  width: 52%;
+}
+
+  .header-sign-up-button {
+    float: right;
+  }
+
+  .header-dashboard-divider {
+    margin: 0;
+  }
+
+  .header-dashboard-item {
+    display: inline-block;
+    font-size: 19px;
+    position: relative;
+    text-align: right;
+
+    a {
+      color: #c2c2c2;
+    }
+  }
+
+  .notification {
+    @include border-radius(2px);
+    background: $color-action;
+    color: #fff;
+    font-size: 12px;
+    right: 0;
+    margin: -6px -7px 0 0;
+    min-width: 12px;
+    padding: 1px 2px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+  }

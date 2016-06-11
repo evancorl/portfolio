@@ -1,0 +1,32 @@
+// *  *  *  *  *  *  MAIN MENU  *  *  *  *  *  * //
+
+$border-menu-item: 3px;
+
+.main-menu {
+  @include box-sizing(border-box);
+  height: 100%;
+}
+
+  .main-menu-list {
+    overflow: hidden;
+  }
+
+    .main-menu-item {
+      display: block;
+      float: left;
+      overflow: hidden;
+      text-align: center;
+      text-transform: capitalize;
+      white-space: nowrap;
+      width: 25%;
+
+      a {
+        color: #fff;
+        display: inline-block;
+        font-size: 16px;
+        letter-spacing: .3px;
+        line-height: $height-header;
+        text-align: center;
+        // width: 100%;
+      }
+    }
