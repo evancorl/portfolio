@@ -7,8 +7,8 @@ class PostBody extends React.Component {
 
   render() {
     return (
-      <div className="post-body">
-        <img src="/images/feeds.jpg" />
+      <div className="post-body mobile-container">
+        <img className="post-image" src="/images/feeds.jpg" />
       </div>
     );
   }

@@ -17,11 +17,11 @@ class PostHeader extends React.Component {
     const postLink = `/post/${_id}`;
 
     return (
-      <header className="post-header">
+      <header className="post-header container">
         <Avatar link={profileLink} image={avatar || '/images/avatar.jpg'} className="post-avatar" />
         <div className="post-info wrapper">
           <div className="post-users">
-            <Link className="post-username" to={profileLink}>{username}</Link>
+            <Link className="post-username" to={profileLink}>{username || 'evancorl'}</Link>
           </div>
           <ul className="post-link-list">
             <li className="post-link-item">
