@@ -6,3 +6,14 @@
   margin-bottom: 15px;
   width: 100%;
 }
+
+  .post-image {
+    display: block;
+  }
+
+@include breakpoint($breakpoint-mobile) {
+  .post-image {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
