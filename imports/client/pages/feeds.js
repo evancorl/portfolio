@@ -5,7 +5,7 @@ import PageMenu from '../components/page-menu';
 const Feeds = () => {
   const pageMenuLinks = [
     'following',
-    'skaters',
+    'popular',
     'brands',
     'cities',
     'regions',

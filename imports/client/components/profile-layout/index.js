@@ -6,7 +6,7 @@ const ProfileLayout = ({ children }) => {
   const pageMenuLinks = [
     'profile',
     'dashboard',
-    'cart',
+    'favorites',
     'messages',
     'notifications',
     'settings',
