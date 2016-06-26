@@ -36,11 +36,13 @@ const renderRoutes = () => {
         {route('feeds', Feeds)}
         {route('feeds/:category', Feeds)}
         {route('browse', Browse)}
-        {route('scenes', Home)}
-        {route('forums', Home)}
-        {route('post', Home)}
+        {route('browse/:category', Browse)}
+        {route('scenes', null)}
+        {route('forums', null)}
+        {route('post', null)}
         {route('profile', Profile)}
         {route('dashboard', Profile)}
+        {route('favorites', Profile)}
         {route('messages', Profile)}
         {route('notifications', Profile)}
         {route('settings', Profile)}
