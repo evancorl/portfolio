@@ -18,14 +18,9 @@ class HeaderDashboard extends React.Component {
 
   _userView() {
     const dashboardLinks = [
-      'dashboard',
-      'cart',
       'messages',
       'notifications',
     ];
-    const style = {
-      width: `${(100 / dashboardLinks.length)}%`,
-    };
 
     return (
       <div className="header-dashboard">
@@ -35,12 +30,13 @@ class HeaderDashboard extends React.Component {
             const className = `icon icon-${link}`;
 
             return (
-              <span key={i} className="header-dashboard-item" style={style}>
+              <span key={i} className="header-dashboard-item">
                 <Link to={`/${link}`} className={className} />
               </span>
             );
           })
         }
+        <Link to="/post" className="header-post-button button red ">New Post</Link>
       </div>
     );
   }
