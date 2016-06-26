@@ -33,12 +33,15 @@
 
 .icon-wheel:before { content:'\e800'; }
 .icon-messages:before { content:'\e801'; }
-.icon-heart:before { content:'\e802'; }
+.icon-heart:before,
+  .icon-favorites:before,
+  .icon-popular:before { content:'\e802'; }
 .icon-star:before { content:'\e803'; }
 .icon-star-empty:before { content:'\e804'; }
 .icon-star-half:before { content:'\e805'; }
 .icon-video:before, 
-  .icon-videos:before { content:'\e806'; }
+  .icon-videos:before,
+  .icon-media:before { content:'\e806'; }
 .icon-image:before { content:'\e807'; }
 .icon-photo:before { content:'\e808'; }
 .icon-check:before { content:'\e809'; }
@@ -76,7 +79,8 @@
 .icon-menu:before { content:'\e823'; }
 .icon-gear:before, 
   .icon-settings:before { content:'\e824'; }
-.icon-calendar:before { content:'\e825'; }
+.icon-calendar:before,
+  .icon-events:before { content:'\e825'; }
 .icon-submit:before { content:'\e826'; }
 .icon-clock:before { content:'\e827'; }
 .icon-cancel:before { content:'\e828'; }
@@ -127,7 +131,8 @@
 .icon-large:before { content:'\e84f'; }
 .icon-umbrella:before { content:'\e850'; }
 .icon-link:before { content:'\e851'; }
-.icon-marker:before { content:'\e852'; }
+.icon-marker:before,
+  .icon-spots:before { content:'\e852'; }
 .icon-hashtag:before { content:'\e853'; }
 .icon-building:before,
   .icon-cities:before { content:'\e854'; }
