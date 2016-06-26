@@ -4,6 +4,7 @@ import { render } from 'react-dom';
 import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 
 import AppContainer from '../components/app-container';
+import Browse from '../pages/browse';
 import Feeds from '../pages/feeds';
 import Home from '../pages/home';
 import LoadingSpinner from '../components/utility/loading-spinner';
@@ -34,7 +35,7 @@ const renderRoutes = () => {
         {route('sign-up', Signup)}
         {route('feeds', Feeds)}
         {route('feeds/:category', Feeds)}
-        {route('browse', Home)}
+        {route('browse', Browse)}
         {route('scenes', Home)}
         {route('forums', Home)}
         {route('post', Home)}
