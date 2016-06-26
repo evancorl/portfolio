@@ -7,9 +7,39 @@
   width: 100%;
 }
 
-  .post-image {
-    display: block;
+  .post-media {
+    margin-bottom: 15px;
   }
+
+    .post-image {
+      display: block;
+    }
+
+  .post-title {
+    border-bottom: 1px solid #cfdada;
+    display: block;
+    font-size: 19px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    text-transform: none;
+    word-spacing: 5px;
+
+    a {
+      color: #444;
+    }
+  }
+
+  .post-message {
+    letter-spacing: .3px;
+    line-height: 25px;
+    padding-bottom: 10px;
+    word-spacing: 5px;
+  }
+
+    .post-view-more {
+      
+    }
 
 @include breakpoint($breakpoint-mobile) {
   .post-image {

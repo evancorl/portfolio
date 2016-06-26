@@ -4,6 +4,14 @@ a.active {
   color: $color-action !important;
 }
 
+.active-underline {
+  color: $color-action;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 .active-hover {
   &:hover {
     color: $color-action;
