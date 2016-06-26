@@ -9,6 +9,7 @@ import Home from '../pages/home';
 import LoadingSpinner from '../components/utility/loading-spinner';
 import Login from '../pages/login';
 import Profile from '../pages/profile';
+import Signup from '../pages/sign-up';
 
 const scrollToTop = () => window.scrollTo(0, 0);
 
@@ -30,7 +31,7 @@ const renderRoutes = () => {
       <Route path="/" component={AppContainer}>
         <IndexRoute component={Home} onEnter={scrollToTop} />
         {route('login', Login)}
-        {route('sign-up', Login)}
+        {route('sign-up', Signup)}
         {route('feeds', Feeds)}
         {route('feeds/:category', Feeds)}
         {route('browse', Home)}
