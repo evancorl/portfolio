@@ -38,7 +38,7 @@ const renderRoutes = () => {
         {route('browse', Browse)}
         {route('browse/:category', Browse)}
         {route('scenes', null)}
-        {route('forums', null)}
+        {route('discuss', null)}
         {route('post', null)}
         {route('profile', Profile)}
         {route('dashboard', Profile)}

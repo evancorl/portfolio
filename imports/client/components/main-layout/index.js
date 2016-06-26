@@ -17,7 +17,7 @@ class MainLayout extends React.Component {
   }
 
   render() {
-    const mobileMenuLinks = ['feeds', 'browse', 'post', 'forums', 'profile'];
+    const mobileMenuLinks = ['feeds', 'browse', 'post', 'discuss', 'profile'];
 
     if (this.props.currentUser === undefined) {
       return <LoadingSpinner className="loading-spinner-box" />;
