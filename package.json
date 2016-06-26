@@ -2,7 +2,7 @@
   "name": "skate-scenes",
   "private": true,
   "scripts": {
-    "start": "meteor run"
+    "start": "meteor --settings settings.json"
   },
   "devDependencies": {
     "chai": "^3.5.0"
