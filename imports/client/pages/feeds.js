@@ -1,23 +1,20 @@
 import React from 'react';
 
-// import PageMenu from '../components/page-menu';
-import Post from '../components/post';
+import PageMenu from '../components/page-menu';
 
-class Feeds extends React.Component {
-  shouldComponentUpdate() {
-    return true;
-  }
+const Feeds = () => {
+  const pageMenuLinks = [
+    'following',
+    'skaters',
+    'brands',
+    'cities',
+    'regions',
+    'countries',
+  ];
 
-  render() {
-    const user = Meteor.user() || {};
-    const post = {};
-
-    return (
-      <div className="col-left">
-        <Post user={user} post={post} />
-      </div>
-    );
-  }
-}
+  return (
+    <PageMenu links={pageMenuLinks} baseUrl="/feeds" />
+  );
+};
 
 export default Feeds;

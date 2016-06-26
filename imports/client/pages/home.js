@@ -1,28 +1,15 @@
 import React from 'react';
 
-import PageMenu from '../components/page-menu';
+import Post from '../components/post';
 
 const Home = () => {
-  const pageMenuLinks = [
-    'following',
-    'skaters',
-    'brands',
-    'cities',
-    'regions',
-    'countries',
-  ];
-
-  // const pageMenuLinks = [
-  //   'boards',
-  //   'apparel',
-  //   'footwear',
-  //   'parts',
-  //   'accessories',
-  //   'videos',
-  // ];
+  const user = Meteor.user() || {};
+  const post = {};
 
   return (
-    <PageMenu links={pageMenuLinks} baseUrl="/feeds" />
+    <div className="col-left">
+      <Post user={user} post={post} />
+    </div>
   );
 };
 
