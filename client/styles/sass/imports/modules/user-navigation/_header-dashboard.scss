@@ -10,11 +10,12 @@
 }
 
 .header-dashboard {
-  width: 52%;
+  width: 54%;
 }
-
+  
+  .header-post-button,
   .header-sign-up-button {
-    float: right;
+    margin-left: auto;
   }
 
   .header-dashboard-divider {
@@ -24,6 +25,7 @@
   .header-dashboard-item {
     display: inline-block;
     font-size: 19px;
+    margin-left: auto;
     position: relative;
     text-align: right;
 

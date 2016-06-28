@@ -4,7 +4,7 @@ import MainMenu from './main-menu';
 import UserNavigation from '../user-navigation';
 
 const HeaderPrimary = () => {
-  const mainMenuLinks = ['feeds', 'browse', 'scenes', 'forums'];
+  const mainMenuLinks = ['feeds', 'browse', 'scenes', 'discuss'];
 
   return (
     <header id="header-primary" className="header-primary container">

@@ -15,7 +15,7 @@ class Post extends React.Component {
     const { post, user } = this.props;
 
     return (
-      <article className="content-box post-box container">
+      <article className="content-box post-box">
         {/* <header className="post-activity header">
           <div className="inner">
             <a href="">puddlepants</a> favorited this video.

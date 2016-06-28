@@ -20,3 +20,5 @@ react-meteor-data
 accounts-password
 static-html
 dispatch:mocha-phantomjs
+accounts-facebook
+service-configuration

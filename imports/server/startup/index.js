@@ -1,7 +1,6 @@
-import seedPosts from './seed-posts';
-import seedUsers from './seed-users';
+import '../facebook';
+import seedData from '../seed-data';
 
 Meteor.startup(() => {
-  seedPosts();
-  seedUsers();
+  seedData();
 });

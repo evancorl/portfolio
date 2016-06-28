@@ -2,17 +2,19 @@
   "name": "skate-scenes",
   "private": true,
   "scripts": {
-    "start": "meteor run"
+    "start": "meteor --settings settings.json"
   },
   "devDependencies": {
     "chai": "^3.5.0"
   },
   "dependencies": {
+    "fb": "^1.1.1",
     "meteor-node-stubs": "^0.2.3",
     "moment": "^2.13.0",
     "react": "^15.1.0",
     "react-addons-pure-render-mixin": "^15.1.0",
     "react-dom": "^15.1.0",
-    "react-router": "^2.4.1"
+    "react-router": "^2.4.1",
+    "url": "^0.11.0"
   }
 }
