@@ -17,11 +17,11 @@ class Post extends React.Component {
     return (
       <article className="content-box post-box">
         {/* <header className="post-activity header">
-          <div className="inner">
+          <div className="inner-y">
             <a href="">puddlepants</a> favorited this video.
           </div>
         </header> */}
-        <form className="inner">
+        <form className="inner-y">
           <PostHeader user={user} post={post} />
           <PostBody post={post} />
           <PostTags post={post} />

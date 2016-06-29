@@ -9,7 +9,7 @@ class Footer extends React.Component {
   render() {
     return (
       <div id="footer" className="mobile-hidden">
-        <ul className="container">
+        <ul className="inner-x">
           <li className="footer-column">
             <h3>Site Map</h3>
             <ul>

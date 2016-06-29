@@ -7,7 +7,7 @@ const HeaderPrimary = () => {
   const mainMenuLinks = ['feeds', 'browse', 'scenes', 'discuss'];
 
   return (
-    <header id="header-primary" className="header-primary container">
+    <header id="header-primary" className="header-primary inner-x">
       <div className="col-wide">
         <MainMenu links={mainMenuLinks} />
         <UserNavigation />

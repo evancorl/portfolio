@@ -15,7 +15,7 @@ class PageMenu extends React.Component {
 
     return (
       <div className={pageMenuClass} method="get">
-        <ul className="page-menu-list inner">
+        <ul className="page-menu-list inner-y">
           {
             links.map((link, i) => {
               const path = (baseUrl ? `${baseUrl}/` : '/') + link;

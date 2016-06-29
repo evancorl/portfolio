@@ -4,22 +4,22 @@
   height: 100%;
 }
 
-.inner,
-.container,
-.mobile-container {
+.inner-x,
+.inner-y,
+.mobile-inner-x, {
   @include box-sizing(border-box);
   display: block;
   margin: 0 auto;
   max-width: 100%;
 }
 
-.container,
-.mobile-container {
+.inner-x,
+.mobile-inner-x {
   padding-left: 20px;
   padding-right: 20px;
 }
 
-.inner {
+.inner-y {
   padding-bottom: 20px;
   padding-top: 20px;
 }
@@ -30,7 +30,7 @@
 }
 
 @include breakpoint($breakpoint-mobile) {
-  .mobile-container {
+  .mobile-inner-x {
     padding-left: 0;
     padding-right: 0;
   }

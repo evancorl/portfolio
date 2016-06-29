@@ -27,7 +27,7 @@ class MainLayout extends React.Component {
       <div id="app-container">
         <HeaderPrimary />
         <HeaderSecondary />
-        <main id="main-content" className="container">
+        <main id="main-content" className="inner-x">
           <div className="col-wide">
             {this.props.children}
           </div>

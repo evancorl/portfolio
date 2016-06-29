@@ -16,10 +16,10 @@ class PostBody extends React.Component {
 
     return (
       <div className="post-body">
-        <div className="post-media mobile-container">
+        <div className="post-media mobile-inner-x">
           <img className="post-image" src="/images/feeds.jpg" />
         </div>
-        <div className="container">
+        <div className="inner-x">
           <div className="post-title">
             <Link to="" className="active-hover">{title}</Link>
           </div>

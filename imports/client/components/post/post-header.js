@@ -17,7 +17,7 @@ class PostHeader extends React.Component {
     const postLink = `/post/${_id}`;
 
     return (
-      <header className="post-header container">
+      <header className="post-header inner-x">
         <Avatar link={profileLink} image={avatar || '/images/avatar.jpg'} className="post-avatar" />
         <div className="post-info wrapper">
           <div className="post-users">
