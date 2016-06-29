@@ -3,7 +3,7 @@ import React from 'react';
 import PostHeader from './post-header';
 import PostBody from './post-body';
 import PostTags from './post-tags';
-import PostActions from './post-actions';
+import PostActionForm from './post-action-form';
 import PostComments from './post-comments';
 
 class Post extends React.Component {
@@ -21,12 +21,12 @@ class Post extends React.Component {
             <a href="">puddlepants</a> favorited this video.
           </div>
         </header> */}
-        <form className="inner-y">
+        <div className="inner-y">
           <PostHeader user={user} post={post} />
           <PostBody post={post} />
           <PostTags post={post} />
-          <PostActions post={post} />
-        </form>
+          <PostActionForm post={post} />
+        </div>
         <PostComments post={post} />
       </article>
     );
