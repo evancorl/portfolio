@@ -3,7 +3,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 
-import AppContainer from '../components/app-container';
+import AppContainer from '../containers/app';
 import Browse from '../pages/browse';
 import Feeds from '../pages/feeds';
 import Home from '../pages/home';
