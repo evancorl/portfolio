@@ -1,18 +1,22 @@
 import React from 'react';
 
 class PostStats extends React.Component {
-  shouldComponentUpdate() {
-    return false;
+  shouldComponentUpdate(nextProps) {
+    const { likeCount, commentCount } = this.props.post;
+
+    return likeCount !== nextProps.post.likeCount || commentCount !== nextProps.post.commentCount;
   }
 
   render() {
+    const { likeCount, commentCount } = this.props.post;
+
     return (
       <div className="post-stats">
         <button type="button" className="post-stat active-hover">
-          16 likes
+          {likeCount} likes
         </button>
         <button type="button" className="post-stat active-hover">
-          5 comments
+          {commentCount} comments
         </button>
       </div>
     );

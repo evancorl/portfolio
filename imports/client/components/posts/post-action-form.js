@@ -5,7 +5,7 @@ import PostStats from './post-stats';
 
 class PostActionForm extends React.Component {
   shouldComponentUpdate() {
-    return false;
+    return true;
   }
 
   render() {

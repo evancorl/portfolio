@@ -7,23 +7,24 @@ class PostBody extends React.Component {
   }
 
   render() {
-    const title = 'INTRODUCING CHRIS COLBOURN - Presented By Element';
-
-    const message = 'Chris Colbourn has been a Berrics favorite since we first saw him skate a '
-      + 'couple years ago. His talent and creativity on a skateboard are unreal. We\'re very '
-      + 'proud to present his brand new street part, presented by Element. This is just the tip '
-      + 'of the iceberg...';
+    const { _id, title, message, media } = this.props.post;
 
     return (
       <div className="post-body">
-        <div className="post-media mobile-inner-x">
-          <img className="post-image" src="/images/feeds.jpg" />
-        </div>
-        <div className="inner-x">
-          <div className="post-title">
-            <Link to="" className="active-hover">{title}</Link>
+        {!media ? null : (
+          <div className="post-media mobile-inner-x">
+            <img className="post-image" src={media.thumbnail} />
           </div>
-          <p className="post-message">{message}</p>
+        )}
+        <div className="inner-x">
+          {!title ? null : (
+            <div className="post-title">
+              <Link to={`/post/${_id}`} className="active-hover">{title}</Link>
+            </div>
+          )}
+          {!message ? null : (
+            <p className="post-message">{message}</p>
+          )}
         </div>
       </div>
     );

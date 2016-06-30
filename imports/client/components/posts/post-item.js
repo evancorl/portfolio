@@ -2,7 +2,7 @@ import React from 'react';
 
 import PostHeader from './post-header';
 import PostBody from './post-body';
-import PostTags from './post-tags';
+// import PostTags from './post-tags';
 import PostActionForm from './post-action-form';
 import PostComments from './comments';
 
@@ -12,7 +12,7 @@ class PostItem extends React.Component {
   }
 
   render() {
-    const { post, user } = this.props;
+    const { post } = this.props;
 
     return (
       <article className="content-box post-box">
@@ -22,9 +22,9 @@ class PostItem extends React.Component {
           </div>
         </header> */}
         <div className="inner-y">
-          <PostHeader user={user} post={post} />
+          <PostHeader post={post} />
           <PostBody post={post} />
-          <PostTags post={post} />
+          {/* <PostTags post={post} /> */}
           <PostActionForm post={post} />
         </div>
         <PostComments post={post} />
@@ -34,7 +34,6 @@ class PostItem extends React.Component {
 }
 
 PostItem.propTypes = {
-  user: React.PropTypes.object.isRequired,
   post: React.PropTypes.object.isRequired,
 };
 

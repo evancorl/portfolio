@@ -11,11 +11,9 @@ class PostList extends React.Component {
   render() {
     const { postsReady, posts } = this.props;
 
-    const user = Meteor.user() || {};
-
     const postList = (
       <div className="post-list">
-        {posts.map((post, i) => <PostItem key={i} post={post} user={user} />)}
+        {posts.map((post, i) => <PostItem key={i} post={post} />)}
       </div>
     );
 

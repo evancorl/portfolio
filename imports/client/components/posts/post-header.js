@@ -10,31 +10,32 @@ class PostHeader extends React.Component {
   }
 
   render() {
-    const { username, avatar } = this.props.user;
-    const { _id, createdAt, type, source } = this.props.post;
+    const { _id, username, avatar, createdAt, type, media } = this.props.post;
 
     const profileLink = `/profile/${username}`;
     const postLink = `/post/${_id}`;
 
     return (
       <header className="post-header inner-x">
-        <Avatar link={profileLink} image={avatar || '/images/avatar.jpg'} className="post-avatar" />
+        <Avatar link={profileLink} image={avatar} className="post-avatar" />
         <div className="post-info wrapper">
           <div className="post-users">
-            <Link className="post-username" to={profileLink}>{username || 'evancorl'}</Link>
+            <Link className="post-username" to={profileLink}>{username}</Link>
           </div>
           <ul className="post-link-list">
             <li className="post-link-item">
               <Link to={postLink}>
-                <TimeElapsed date={createdAt || new Date()} />
+                <TimeElapsed date={createdAt} />
               </Link>
             </li>
             <li className="post-link-item">
-              <Link to={postLink}>{type || 'Video'}</Link>
+              <Link to={postLink}>{type}</Link>
             </li>
-            <li className="post-link-item">
-              <Link to={postLink}>{source || 'Facebook'}</Link>
-            </li>
+            {!media.source ? null : (
+              <li className="post-link-item">
+                <Link to={postLink}>{media.source}</Link>
+              </li>
+            )}
           </ul>
           <button type="button" className="icon icon-down post-more-options"></button>
         </div>
@@ -44,7 +45,6 @@ class PostHeader extends React.Component {
 }
 
 PostHeader.propTypes = {
-  user: React.PropTypes.object.isRequired,
   post: React.PropTypes.object.isRequired,
 };
 
