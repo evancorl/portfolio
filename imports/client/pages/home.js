@@ -1,16 +1,11 @@
 import React from 'react';
 
-import PostItem from '../components/posts/post-item';
+import PostListContainer from '../containers/post-list';
 
-const Home = () => {
-  const user = Meteor.user() || {};
-  const post = {};
-
-  return (
-    <div className="col-left">
-      <PostItem user={user} post={post} />
-    </div>
-  );
-};
+const Home = () => (
+  <div className="col-left">
+    <PostListContainer />
+  </div>
+);
 
 export default Home;
