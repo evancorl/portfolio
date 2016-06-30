@@ -1,0 +1,72 @@
+// *  *  *  *  *  *  POST COMMENTS  *  *  *  *  *  * //
+
+.post-comments {
+  background-color: #f4f4f4;
+  color: #666;
+  font-size: 14px;
+}
+
+  .post-more-comments {
+    @include border-radius(0);
+    background-color: #e3e3e3;
+    letter-spacing: .3px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align: left;
+    word-spacing: 1.5px;
+    width: 100%;
+
+    &:hover {
+      background-color: #d8d8d8;
+      color: inherit;
+    }
+  }
+
+// *  *  *  *  *  *  COMMENT ITEM  *  *  *  *  *  * //
+
+  .comments-list {
+    padding-top: 15px;
+  }
+
+    .comment-item {
+      padding-bottom: 15px;
+    }
+
+      .comment-avatar {
+        background-color: #d9d9d9;
+        color: #888;
+        font-size: 24px;
+        height: 30px;
+        margin-right: 15px;
+        width: 30px;
+      }
+
+      .comment-body,
+      .comment-message {
+        display: table-cell;
+        letter-spacing: .3px;
+        word-spacing: 2.5px;
+      }
+
+        .comment-user {
+          margin-right: 10px;
+        }
+
+      .comment-time {
+        color: #999;
+        font-size: 12px;      
+      }
+
+// *  *  *  *  *  *  WRITE COMMENT  *  *  *  *  *  * //
+
+.write-comment {
+  padding-bottom: 20px;
+}
+
+  .comment-text-box {
+    border: none;
+    height: 30px;
+    line-height: 25px;
+    padding-top: 3px;
+    padding-right: 10px;
+  }
