@@ -10,12 +10,14 @@ const seedPosts = () => {
       Posts.insert({
         userId: 'QBgyG7MsqswQmvm7J',
         username: 'evancorl',
+        avatar: '/images/avatar.jpg',
         createdAt: moment().utc().toDate(),
+        type: 'Video',
+        title: 'This is a sample title',
         message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod ' +
                  'tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, ' +
                  'quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.',
         media: {
-          type: 'Video',
           source: 'YouTube',
           thumbnail: '/images/feeds.jpg',
           url: 'https://www.meteor.com/',
@@ -27,12 +29,13 @@ const seedPosts = () => {
       Posts.insert({
         userId: 'QBgyG7MsqswQmvm7J',
         username: 'evancorl',
+        avatar: '/images/avatar.jpg',
         createdAt: moment().utc().toDate(),
+        type: 'Photo',
         message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod ' +
                  'tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, ' +
                  'quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.',
         media: {
-          type: 'Photo',
           thumbnail: '/images/feeds-2.jpg',
           url: 'https://www.meteor.com/',
         },
