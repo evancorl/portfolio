@@ -5,8 +5,8 @@ const seedUsers = () => {
 
   if (userCount === 0) {
     Accounts.createUser({
-      username: 'ephankoral',
-      email: 'evan@poeticsystems.com',
+      username: 'evancorl',
+      email: 'info@evancorl.com',
       password: 'password',
       profile: {},
     });

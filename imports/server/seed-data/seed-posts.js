@@ -1,3 +1,4 @@
+import { Meteor } from 'meteor/meteor';
 import moment from 'moment';
 
 import { Posts } from '../../api/collections';
@@ -6,10 +7,12 @@ const seedPosts = () => {
   const post = Posts.findOne();
 
   if (!post) {
+    const user = Meteor.users.findOne();
+
     for (let i = 0; i < 50; i++) {
       Posts.insert({
-        userId: 'QBgyG7MsqswQmvm7J',
-        username: 'evancorl',
+        userId: user._id,
+        username: user.username,
         avatar: '/images/avatar.jpg',
         createdAt: moment().utc().toDate(),
         type: 'Video',
@@ -27,8 +30,8 @@ const seedPosts = () => {
       });
 
       Posts.insert({
-        userId: 'QBgyG7MsqswQmvm7J',
-        username: 'evancorl',
+        userId: user._id,
+        username: user.username,
         avatar: '/images/avatar.jpg',
         createdAt: moment().utc().toDate(),
         type: 'Photo',
