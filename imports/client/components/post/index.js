@@ -4,7 +4,7 @@ import PostHeader from './post-header';
 import PostBody from './post-body';
 import PostTags from './post-tags';
 import PostActionForm from './post-action-form';
-import PostComments from './post-comments';
+import PostComments from './comments';
 
 class Post extends React.Component {
   shouldComponentUpdate() {
