@@ -3,44 +3,41 @@ import moment from 'moment';
 import { Posts } from '../../api/collections';
 
 const seedPosts = () => {
-  const postCount = Posts.find().count();
+  const post = Posts.findOne();
 
-  if (postCount === 0) {
+  if (!post) {
     for (let i = 0; i < 50; i++) {
       Posts.insert({
-        createdAt: moment().utc().toDate(),
         userId: 'QBgyG7MsqswQmvm7J',
+        username: 'evancorl',
+        createdAt: moment().utc().toDate(),
         message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod ' +
                  'tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, ' +
                  'quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.',
         media: {
           type: 'Video',
-          source: 'Facebook',
-          thumb: '/images/feeds.jpg',
+          source: 'YouTube',
+          thumbnail: '/images/feeds.jpg',
           url: 'https://www.meteor.com/',
         },
-        totalViews: 30,
-        totalLikes: 14,
-        totalShares: 3,
-        totalComments: 3,
+        likeCount: 14,
+        commentCount: 3,
       });
 
       Posts.insert({
-        createdAt: moment().utc().toDate(),
         userId: 'QBgyG7MsqswQmvm7J',
+        username: 'evancorl',
+        createdAt: moment().utc().toDate(),
         message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod ' +
                  'tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, ' +
                  'quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.',
         media: {
           type: 'Photo',
-          source: 'Instagram',
-          thumb: '/images/feeds-2.jpg',
+          thumbnail: '/images/feeds-2.jpg',
           url: 'https://www.meteor.com/',
         },
-        totalViews: 30,
-        totalLikes: 14,
-        totalShares: 3,
-        totalComments: 3,
+        likeCount: 14,
+        commentCount: 3,
       });
     }
   }
