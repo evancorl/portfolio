@@ -1,9 +1,9 @@
 import { Accounts } from 'meteor/accounts-base';
 
 const seedUsers = () => {
-  const userCount = Meteor.users.find().count();
+  const user = Meteor.users.findOne();
 
-  if (userCount === 0) {
+  if (!user) {
     Accounts.createUser({
       username: 'evancorl',
       email: 'info@evancorl.com',
