@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Post from '../components/post';
+import PostItem from '../components/posts/post-item';
 
 const Home = () => {
   const user = Meteor.user() || {};
@@ -8,7 +8,7 @@ const Home = () => {
 
   return (
     <div className="col-left">
-      <Post user={user} post={post} />
+      <PostItem user={user} post={post} />
     </div>
   );
 };

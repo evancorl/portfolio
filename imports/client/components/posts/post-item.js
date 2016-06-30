@@ -6,7 +6,7 @@ import PostTags from './post-tags';
 import PostActionForm from './post-action-form';
 import PostComments from './comments';
 
-class Post extends React.Component {
+class PostItem extends React.Component {
   shouldComponentUpdate() {
     return false;
   }
@@ -33,9 +33,9 @@ class Post extends React.Component {
   }
 }
 
-Post.propTypes = {
+PostItem.propTypes = {
   user: React.PropTypes.object.isRequired,
   post: React.PropTypes.object.isRequired,
 };
 
-export default Post;
+export default PostItem;
