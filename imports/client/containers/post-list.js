@@ -1,13 +1,24 @@
 import { createContainer } from 'meteor/react-meteor-data';
 
-import { Posts } from '../../api/collections';
+import { Posts, Comments } from '../../api/collections';
 import PostList from '../components/posts/post-list';
 
 const PostListContainer = createContainer(() => {
   const postsSub = Meteor.subscribe('posts');
-
   const postsReady = postsSub.ready();
-  const posts = Posts.find().fetch();
+
+  let posts = Posts.find().fetch();
+
+  posts = _.map(posts, post => {
+    const comments = Comments.find({
+      postId: post._id,
+    }).fetch();
+
+    return {
+      ...post,
+      comments,
+    };
+  });
 
   return {
     postsReady,
