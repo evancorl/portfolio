@@ -9,20 +9,17 @@ class CommentItem extends React.Component {
   }
 
   render() {
+    const { username, avatar, message, createdAt } = this.props.comment;
+
     return (
       <form className="comment-item">
-        <Avatar image="/images/avatar.jpg" className="comment-avatar" />
+        <Avatar image={avatar} className="comment-avatar" />
         <div className="comment-body">
           <p className="comment-text">
-            <span className="comment-user active-underline">puddlepants</span>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-            mollit anim id est laborum.
+            <span className="comment-user active-underline">{username}</span>
+            {message}
           </p>
-          <TimeElapsed date={new Date()} className="comment-time" />
+          <TimeElapsed date={createdAt} className="comment-time" />
         </div>
       </form>
     );
@@ -30,7 +27,7 @@ class CommentItem extends React.Component {
 }
 
 CommentItem.propTypes = {
-  // comment: React.PropTypes.object.isRequired,
+  comment: React.PropTypes.object.isRequired,
 };
 
 export default CommentItem;

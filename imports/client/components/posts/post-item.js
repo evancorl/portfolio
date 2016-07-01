@@ -27,7 +27,7 @@ class PostItem extends React.Component {
           {/* <PostTags post={post} /> */}
           <PostActionForm post={post} />
         </div>
-        <PostComments post={post} />
+        <PostComments comments={post.comments} />
       </article>
     );
   }

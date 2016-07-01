@@ -10,11 +10,13 @@ class PostComments extends React.Component {
   }
 
   render() {
+    const { comments } = this.props;
+
     return (
       <div className="post-comments">
         <MoreComments count={2} />
         <div className="comments-list inner-x">
-          <CommentItem />
+          {comments.map(comment => <CommentItem comment={comment} />)}
           <WriteComment />
         </div>
       </div>
@@ -23,7 +25,7 @@ class PostComments extends React.Component {
 }
 
 PostComments.propTypes = {
-  // post: React.PropTypes.object.isRequired,
+  comments: React.PropTypes.array.isRequired,
 };
 
 export default PostComments;
