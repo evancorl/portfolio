@@ -22,3 +22,4 @@ static-html
 dispatch:mocha-phantomjs
 accounts-facebook
 service-configuration
+reywood:publish-composite
