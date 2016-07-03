@@ -1,7 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import moment from 'moment';
 
-import { Posts } from '../../api/collections';
+import { Posts } from '../../api';
 
 const seedPosts = () => {
   const post = Posts.findOne();

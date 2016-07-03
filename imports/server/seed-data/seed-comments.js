@@ -2,7 +2,7 @@ import { Meteor } from 'meteor/meteor';
 import { _ } from 'meteor/underscore';
 import moment from 'moment';
 
-import { Comments, Posts } from '../../api/collections';
+import { Comments, Posts } from '../../api';
 
 const seedComments = () => {
   const comment = Comments.findOne();

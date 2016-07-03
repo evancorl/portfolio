@@ -1,6 +1,6 @@
 import { createContainer } from 'meteor/react-meteor-data';
 
-import { Posts, Comments } from '../../api/collections';
+import { Posts, Comments } from '../../api';
 import PostList from '../components/posts/post-list';
 
 const PostListContainer = createContainer(() => {
