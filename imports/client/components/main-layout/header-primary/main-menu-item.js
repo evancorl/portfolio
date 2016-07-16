@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 const MainMenuItem = ({ link }) => (
   <li className="main-menu-item">
-    <Link to={`/${link}`} className="active-border" activeClassName="active">
+    <Link to={`/${link.toLowerCase()}`} className="active-border" activeClassName="active">
       {link}
     </Link>
   </li>
