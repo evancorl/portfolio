@@ -10,8 +10,9 @@ class MoreComments extends React.Component {
 
     const moreCommentsButton = (
       <button type="button" className="post-more-comments inner-x">
-        <strong>{count}</strong> more comments
         <span className="f-right">(view more)</span>
+        <strong>{count}</strong>
+        <span> more comments</span>
       </button>
     );
 
