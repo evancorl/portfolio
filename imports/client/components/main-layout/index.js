@@ -4,7 +4,6 @@ import HeaderPrimary from './header-primary';
 import HeaderSecondary from './header-secondary';
 // import Footer from './footer';
 import MobileMenu from './mobile-menu';
-import LoadingSpinner from '../utility/loading-spinner';
 
 class MainLayout extends React.Component {
   getChildContext() {
@@ -19,11 +18,7 @@ class MainLayout extends React.Component {
   render() {
     const mobileMenuLinks = ['feeds', 'browse', 'post', 'discuss', 'profile'];
 
-    if (this.props.currentUser === undefined) {
-      return <LoadingSpinner className="loading-spinner-box" />;
-    }
-
-    return (
+    return this.props.currentUser === undefined ? null : (
       <div id="app-container">
         <HeaderPrimary />
         <HeaderSecondary />
