@@ -4,12 +4,12 @@ import PageMenu from '../components/page-menu';
 
 const Browse = () => {
   const pageMenuLinks = [
-    'media',
-    'scenes',
-    'brands',
-    'spots',
-    'events',
-    'users',
+    'Media',
+    'Scenes',
+    'Brands',
+    'Spots',
+    'Events',
+    'Users',
   ];
 
   return (

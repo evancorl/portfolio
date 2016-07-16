@@ -4,12 +4,12 @@ import PageMenu from '../components/page-menu';
 
 const Feeds = () => {
   const pageMenuLinks = [
-    'following',
-    'popular',
-    'brands',
-    'cities',
-    'regions',
-    'countries',
+    'Following',
+    'Popular',
+    'Brands',
+    'Cities',
+    'Regions',
+    'Countries',
   ];
 
   return (

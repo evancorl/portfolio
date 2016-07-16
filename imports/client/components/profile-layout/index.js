@@ -4,12 +4,12 @@ import PageMenu from '../page-menu';
 
 const ProfileLayout = ({ children }) => {
   const pageMenuLinks = [
-    'profile',
-    'dashboard',
-    'favorites',
-    'messages',
-    'notifications',
-    'settings',
+    'Profile',
+    'Dashboard',
+    'Favorites',
+    'Messages',
+    'Notifications',
+    'Settings',
   ];
 
   return (
