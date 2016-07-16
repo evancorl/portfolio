@@ -3,8 +3,10 @@ import { createContainer } from 'meteor/react-meteor-data';
 import { Posts, Comments } from '../../api';
 import PostList from '../components/posts/post-list';
 
+const limit = new ReactiveVar(10);
+
 const PostListContainer = createContainer(() => {
-  const postsSub = Meteor.subscribe('posts');
+  const postsSub = Meteor.subscribe('posts', limit.get());
   const postsReady = postsSub.ready();
 
   let posts = Posts.find().fetch();
@@ -21,6 +23,7 @@ const PostListContainer = createContainer(() => {
   });
 
   return {
+    limit,
     postsReady,
     posts,
   };
