@@ -18,12 +18,14 @@ class PageMenu extends React.Component {
         <ul className="page-menu-list inner-y">
           {
             links.map((link, i) => {
-              const path = (baseUrl ? `${baseUrl}/` : '/') + link;
+              const lowercaseLink = link.toLowerCase();
               const capitalizedLink = link.charAt(0).toUpperCase() + link.slice(1);
+
+              const path = (baseUrl ? `${baseUrl}/` : '/') + lowercaseLink;
 
               return (
                 <li key={i} className="page-menu-item">
-                  <Link to={path} className={`icon icon-${link}`} activeClassName="active">
+                  <Link to={path} className={`icon icon-${lowercaseLink}`} activeClassName="active">
                     {capitalizedLink}
                   </Link>
                 </li>
