@@ -4,12 +4,13 @@ import { render } from 'react-dom';
 import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 
 import AppContainer from '../containers/app';
-import Browse from '../pages/browse';
-import Feeds from '../pages/feeds';
-import Home from '../pages/home';
+import About from '../pages/about';
+import Contact from '../pages/contact';
+import Demo from '../pages/demo';
 import LoadingSpinner from '../components/utility/loading-spinner';
 import Login from '../pages/login';
-import Profile from '../pages/profile';
+import Projects from '../pages/projects';
+import Resume from '../pages/resume';
 import Signup from '../pages/sign-up';
 
 const scrollToTop = () => window.scrollTo(0, 0);
@@ -30,22 +31,15 @@ const renderRoutes = () => {
   render(
     <Router history={browserHistory}>
       <Route path="/" component={AppContainer}>
-        <IndexRoute component={Home} onEnter={scrollToTop} />
+        <IndexRoute component={About} onEnter={scrollToTop} />
+        {route('about', About)}
+        {route('projects', Projects)}
+        {route('demo', Demo)}
+        {route('resume', Resume)}
+        {route('contact', Contact)}
         {route('login', Login)}
         {route('sign-up', Signup)}
-        {route('feeds', Feeds)}
-        {route('feeds/:category', Feeds)}
-        {route('browse', Browse)}
-        {route('browse/:category', Browse)}
-        {route('scenes', null)}
-        {route('discuss', null)}
         {route('post', null)}
-        {route('profile', Profile)}
-        {route('dashboard', Profile)}
-        {route('favorites', Profile)}
-        {route('messages', Profile)}
-        {route('notifications', Profile)}
-        {route('settings', Profile)}
         {route('logout', LoadingSpinner, logout)}
       </Route>
     </Router>,
