@@ -16,8 +16,8 @@ class MainMenu extends React.Component {
     return (
       <nav className="main-menu col-left">
         <Link to="/" className="main-menu-logo logo">
-          <span className="logo-text-skate">skate</span>
-          <span className="logo-text-scenes">scenes</span>
+          <span className="logo-text-lower">evan</span>
+          <span className="logo-text-upper">CORL</span>
         </Link>
         <span className="header-primary-divider logo-divider"></span>
         <ul className="main-menu-list">
