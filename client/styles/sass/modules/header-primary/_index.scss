@@ -18,8 +18,15 @@
     margin: 9px 0 0 0;
   }
 
+.header-spacer {
+  display: block;
+  height: $height-header;
+  width: 100%;
+}
+
 @include breakpoint($breakpoint-mobile) {
-  #header-primary {
+  #header-primary,
+  .header-spacer {
     display: none;
   }
 }
