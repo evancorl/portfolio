@@ -1,0 +1,55 @@
+// *  *  *  *  *  *  INTRODUCTION BAND  *  *  *  *  *  * //
+
+.intro-band {
+  background-color: #fff;
+  padding: 60px 0;
+}
+
+  .intro-col {
+    @include align-items(center);
+    @include display-flex(flex);
+  }
+
+    .intro-photo {
+      @include border-radius(4px);
+      margin-right: 35px;
+      -webkit-transition: all 300ms;
+      -moz-transition: all 300ms;
+      transition: all 300ms;
+    }
+
+    .intro-title {
+      font-size: 55px;
+      font-weight: 100;
+    }
+
+    .intro-body {
+      font-size: 35px;
+      font-weight: 100;
+    }
+
+      .intro-love {
+        color: $color-action;
+        font-weight: 400;
+      }
+
+@include breakpoint($breakpoint-single-col) {
+  .intro-photo {
+    max-width: 275px;
+  }
+}
+
+@include breakpoint($breakpoint-mobile) {
+  .intro-col {
+    @include flex-wrap(wrap);
+  }
+
+    .intro-photo {
+      margin: 0 auto 20px auto;
+      max-width: 100%;
+    }
+
+    .intro-text {
+      text-align: center;
+    }
+}
