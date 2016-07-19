@@ -1,4 +1,5 @@
 import { createContainer } from 'meteor/react-meteor-data';
+import { _ } from 'meteor/underscore';
 
 import { Posts, Comments } from '../../api';
 import PostList from '../components/posts/post-list';
