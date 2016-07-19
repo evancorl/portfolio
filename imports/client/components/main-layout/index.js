@@ -1,7 +1,6 @@
 import React from 'react';
 
 import HeaderPrimary from './header-primary';
-import HeaderSecondary from './header-secondary';
 // import Footer from './footer';
 import MobileMenu from './mobile-menu';
 
@@ -22,11 +21,8 @@ class MainLayout extends React.Component {
       <div id="app-container">
         <HeaderPrimary />
         <div className="header-spacer"></div>
-        <HeaderSecondary />
-        <main id="main-content" className="inner-hor">
-          <div className="col-wide">
-            {this.props.children}
-          </div>
+        <main id="main-content">
+          {this.props.children}
         </main>
         {/* <Footer /> */}
         <MobileMenu links={mobileMenuLinks} />

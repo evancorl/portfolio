@@ -13,7 +13,9 @@ const Feeds = () => {
   ];
 
   return (
-    <PageMenu links={pageMenuLinks} baseUrl="/feeds" />
+    <div className="col-wide">
+      <PageMenu links={pageMenuLinks} baseUrl="/feeds" />
+    </div>
   );
 };
 

@@ -13,7 +13,9 @@ const Browse = () => {
   ];
 
   return (
-    <PageMenu links={pageMenuLinks} baseUrl="/browse" />
+    <div className="col-wide">
+      <PageMenu links={pageMenuLinks} baseUrl="/browse" />
+    </div>
   );
 };
 
