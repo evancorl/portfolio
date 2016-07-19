@@ -1,9 +1,11 @@
 import React from 'react';
 
-import Introduction from '../components/introduction';
+import IntroBand from '../components/intro-band';
 
 const AboutPage = () => (
-  <Introduction />
+  <div className="about-page">
+    <IntroBand />
+  </div>
 );
 
 export default AboutPage;

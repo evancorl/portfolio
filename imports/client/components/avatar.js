@@ -1,5 +1,5 @@
 import React from 'react';
-import LinkWrap from '../utility/link-wrap';
+import LinkWrap from './utility/link-wrap';
 
 class Avatar extends React.Component {
   shouldComponentUpdate(nextProps) {
