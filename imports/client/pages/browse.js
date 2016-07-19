@@ -2,7 +2,7 @@ import React from 'react';
 
 import PageMenu from '../components/page-menu';
 
-const Browse = () => {
+const BrowsePage = () => {
   const pageMenuLinks = [
     'Media',
     'Scenes',
@@ -19,4 +19,4 @@ const Browse = () => {
   );
 };
 
-export default Browse;
+export default BrowsePage;

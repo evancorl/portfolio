@@ -2,7 +2,7 @@ import React from 'react';
 
 import PageMenu from '../components/page-menu';
 
-const Feeds = () => {
+const FeedsPage = () => {
   const pageMenuLinks = [
     'Following',
     'Popular',
@@ -19,4 +19,4 @@ const Feeds = () => {
   );
 };
 
-export default Feeds;
+export default FeedsPage;

@@ -2,8 +2,8 @@ import React from 'react';
 
 import Introduction from '../components/introduction';
 
-const About = () => (
+const AboutPage = () => (
   <Introduction />
 );
 
-export default About;
+export default AboutPage;

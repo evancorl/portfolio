@@ -4,14 +4,14 @@ import { render } from 'react-dom';
 import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 
 import AppContainer from '../containers/app';
-import About from '../pages/about';
-import Contact from '../pages/contact';
-import Demo from '../pages/demo';
+import AboutPage from '../pages/about';
+import ContactPage from '../pages/contact';
+import DemoPage from '../pages/demo';
 import LoadingSpinner from '../components/utility/loading-spinner';
-import Login from '../pages/login';
-import Projects from '../pages/projects';
-import Resume from '../pages/resume';
-import Signup from '../pages/sign-up';
+import LoginPage from '../pages/login';
+import ProjectsPage from '../pages/projects';
+import ResumePage from '../pages/resume';
+import SignupPage from '../pages/sign-up';
 
 const scrollToTop = () => window.scrollTo(0, 0);
 
@@ -31,14 +31,14 @@ const renderRoutes = () => {
   render(
     <Router history={browserHistory}>
       <Route path="/" component={AppContainer}>
-        <IndexRoute component={About} onEnter={scrollToTop} />
-        {route('about', About)}
-        {route('projects', Projects)}
-        {route('demo', Demo)}
-        {route('resume', Resume)}
-        {route('contact', Contact)}
-        {route('login', Login)}
-        {route('sign-up', Signup)}
+        <IndexRoute component={AboutPage} onEnter={scrollToTop} />
+        {route('about', AboutPage)}
+        {route('projects', ProjectsPage)}
+        {route('demo', DemoPage)}
+        {route('resume', ResumePage)}
+        {route('contact', ContactPage)}
+        {route('login', LoginPage)}
+        {route('sign-up', SignupPage)}
         {route('post', null)}
         {route('logout', LoadingSpinner, logout)}
       </Route>

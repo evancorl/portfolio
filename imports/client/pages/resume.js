@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Resume = () => (
+const ResumePage = () => (
   <div></div>
 );
 
-export default Resume;
+export default ResumePage;
