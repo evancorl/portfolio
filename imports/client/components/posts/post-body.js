@@ -12,11 +12,11 @@ class PostBody extends React.Component {
     return (
       <div className="post-body">
         {!media ? null : (
-          <div className="post-media mobile-inner-x">
+          <div className="post-media mobile-inner-hor">
             <img className="post-image" src={media.thumbnail} />
           </div>
         )}
-        <div className="inner-x">
+        <div className="inner-hor">
           {!title ? null : (
             <div className="post-title">
               <Link to={`/post/${_id}`} className="active-hover">{title}</Link>

@@ -15,7 +15,7 @@ class PostComments extends React.Component {
     return (
       <div className="post-comments">
         <MoreComments count={2} />
-        <div className="comments-list inner-x">
+        <div className="comments-list inner-hor">
           {comments.map((comment, i) => <CommentItem key={i} comment={comment} />)}
           <WriteComment />
         </div>

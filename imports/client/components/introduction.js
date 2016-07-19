@@ -8,7 +8,7 @@ class Introduction extends React.Component {
   render() {
     return (
       <div className="intro-band">
-        <div className="inner-x">
+        <div className="inner-hor">
           <div className="col-wide intro-col">
             <img src="/images/me.jpg" className="intro-photo" />
             <div className="intro-text">

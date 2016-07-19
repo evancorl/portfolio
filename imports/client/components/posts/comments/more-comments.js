@@ -9,7 +9,7 @@ class MoreComments extends React.Component {
     const { count } = this.props;
 
     const moreCommentsButton = (
-      <button type="button" className="post-more-comments inner-x">
+      <button type="button" className="post-more-comments inner-hor">
         <span className="f-right">(view more)</span>
         <strong>{count}</strong>
         <span> more comments</span>

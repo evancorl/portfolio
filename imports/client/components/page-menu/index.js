@@ -15,7 +15,7 @@ class PageMenu extends React.Component {
 
     return (
       <div className={pageMenuClass} method="get">
-        <ul className="page-menu-list inner-y">
+        <ul className="page-menu-list inner-ver">
           {
             links.map((link, i) => {
               const lowercaseLink = link.toLowerCase();

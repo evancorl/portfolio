@@ -23,7 +23,7 @@ class MainLayout extends React.Component {
         <HeaderPrimary />
         <div className="header-spacer"></div>
         <HeaderSecondary />
-        <main id="main-content" className="inner-x">
+        <main id="main-content" className="inner-hor">
           <div className="col-wide">
             {this.props.children}
           </div>

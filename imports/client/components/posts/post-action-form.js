@@ -12,7 +12,7 @@ class PostActionForm extends React.Component {
     const { post } = this.props;
 
     return (
-      <div className="inner-x">
+      <div className="inner-hor">
         <form className="post-action-form">
           <PostStats post={post} />
           <PostActions post={post} />
