@@ -74,7 +74,8 @@
 .icon-direction:before,
   .icon-regions:before { content:'\e81e'; }
 .icon-trash:before { content:'\e81f'; }
-.icon-page:before { content:'\e820'; }
+.icon-page:before,
+  .icon-resume:before { content:'\e820'; }
 .icon-folder:before { content:'\e821'; }
 .icon-folder-open:before { content:'\e822'; }
 .icon-menu:before { content:'\e823'; }
@@ -106,13 +107,15 @@
 .icon-dashboard:before { content:'\e83b'; }
 .icon-vine:before { content:'\e83c'; }
 .icon-play:before, 
-  .icon-feeds:before { content:'\e83d'; }
+  .icon-feeds:before,
+  .icon-demo:before { content:'\e83d'; }
 .icon-search:before,
   .icon-browse:before,
   .icon-shop:before { content:'\e83e'; }
 .icon-question:before { content:'\e83f'; }
 .icon-help:before { content:'\e840'; }
-.icon-monitor:before { content:'\e841'; }
+.icon-monitor:before,
+  .icon-projects:before { content:'\e841'; }
 .icon-mobile:before { content:'\e842'; }
 .icon-earth:before,
   .icon-scene:before,
@@ -143,7 +146,8 @@
 .icon-eye:before { content:'\e858'; }
 .icon-eye-off:before { content:'\e859'; }
 .icon-user:before, 
-  .icon-profile:before { content:'\e85a'; }
+  .icon-profile:before,
+  .icon-about:before { content:'\e85a'; }
 .icon-globe:before { content:'\e85b'; }
 .icon-cart:before { content:'\e85c'; }
 .icon-chart:before, 
