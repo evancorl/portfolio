@@ -14,7 +14,7 @@ class MainLayout extends React.Component {
   }
 
   render() {
-    const mobileMenuLinks = ['feeds', 'browse', 'post', 'discuss', 'profile'];
+    const mobileMenuLinks = ['Home', 'About', 'Projects', 'Demo', 'Resume'];
 
     return this.props.currentUser === undefined ? null : (
       <div id="app-container">
