@@ -1,0 +1,64 @@
+// *  *  *  *  *  *  ABOUT BAND  *  *  *  *  *  * //
+
+.about-band {
+  padding-bottom: 0;
+}
+
+  .about-title {
+    font-size: 55px;
+    font-weight: 100;
+    margin-bottom: 20px;
+  }
+
+  .about-text {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .about-subtitle {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 25px;
+  }
+
+  .about-list {
+    margin-bottom: 15px;
+  }
+
+    .about-item {
+      display: inline-block;
+      margin-bottom: 25px;
+      text-align: center;
+      width: (100/6) * 1%;
+    }
+
+// *  *  *  *  *  *  LANGUAGE LIST  *  *  *  *  *  * //
+
+    .language-item {
+      font-size: 25px;
+      font-weight: 100;
+    }
+
+// *  *  *  *  *  *  TOOL LIST  *  *  *  *  *  * //
+
+      .tool-img {
+        height: 60px;
+        margin-bottom: 5px;
+        width: auto;
+      }
+
+      .tool-name {
+        font-size: 16px;
+      }
+
+@include breakpoint($breakpoint-single-col) {
+  .about-item {
+    width: (100/3) * 1%;
+  }
+}
+
+@include breakpoint($breakpoint-mobile) {
+  .about-item {
+    width: 50%;
+  }
+}

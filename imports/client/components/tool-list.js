@@ -9,11 +9,11 @@ class ToolList extends React.Component {
     const { tools } = this.props;
 
     return (
-      <ul className="tool-list">
+      <ul className="tool-list about-list">
         {
           tools.map((tool, i) => (
-            <li key={i} className="tool-item">
-              <img className="tool-image" src={`/images/tools/${tool.toLowerCase()}.png`} />
+            <li key={i} className="tool-item about-item">
+              <img className="tool-img" src={`/images/tools/${tool.toLowerCase()}.png`} />
               <div className="tool-name">{tool}</div>
             </li>
           ))

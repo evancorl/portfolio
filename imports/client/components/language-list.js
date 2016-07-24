@@ -9,10 +9,10 @@ class LanguageList extends React.Component {
     const { languages } = this.props;
 
     return (
-      <ul className="language-list">
+      <ul className="language-list about-list">
         {
           languages.map((language, i) => (
-            <li key={i} className="language-item">
+            <li key={i} className="language-item about-item">
               {language}
             </li>
           ))
