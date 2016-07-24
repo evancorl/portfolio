@@ -23,6 +23,7 @@ class MainLayout extends React.Component {
         <main id="main-content">
           {this.props.children}
         </main>
+        <div className="header-spacer-mobile"></div>
         <MobileMenu links={mobileMenuLinks} />
       </div>
     );
