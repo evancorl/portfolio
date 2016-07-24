@@ -16,21 +16,21 @@
 @import 'fonts/stateface';
 
 // Modules
-@import 'modules/_avatar';
-@import 'modules/_button';
-@import 'modules/_column';
-@import 'modules/_content-box';
-@import 'modules/_core';
-@import 'modules/_intro-band';
-@import 'modules/_links';
-@import 'modules/_loading-spinner';
-@import 'modules/_main-content';
-@import 'modules/_mobile-menu';
-@import 'modules/_page-menu';
-@import 'modules/_text-box';
-@import 'modules/_utility';
+@import 'modules/core';
 
-@import 'modules/header-primary/_index';
-@import 'modules/header-secondary/_index';
-@import 'modules/post-box/_index';
-@import 'modules/user-navigation/_index';
+@import 'modules/avatar';
+@import 'modules/button';
+@import 'modules/column';
+@import 'modules/content-box';
+@import 'modules/intro-band';
+@import 'modules/links';
+@import 'modules/loading-spinner';
+@import 'modules/main-content';
+@import 'modules/mobile-menu';
+@import 'modules/page-menu';
+@import 'modules/text-box';
+
+@import 'modules/header-primary/index';
+@import 'modules/header-secondary/index';
+@import 'modules/post-box/index';
+@import 'modules/user-navigation/index';
