@@ -32,6 +32,7 @@ const renderRoutes = () => {
     <Router history={browserHistory}>
       <Route path="/" component={AppContainer}>
         <IndexRoute component={AboutPage} onEnter={scrollToTop} />
+        {route('home', AboutPage)}
         {route('about', AboutPage)}
         {route('projects', ProjectsPage)}
         {route('demo', DemoPage)}
