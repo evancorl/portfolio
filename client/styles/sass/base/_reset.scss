@@ -8,7 +8,7 @@
 
   &:focus,
   &:focus * {
-      outline: none;
+    outline: none;
   }
 }
 
@@ -17,18 +17,16 @@ html {
 }
 
 body {
-  background: #e4e4e4;
-  color: #777;
-  font-family: $font-primary;
-  font-size: 14px;
+  background-color: $bg-color-body;
+  color: $color-text;
+  font-family: $font-family-primary;
+  font-size: $font-size-primary;
   font-weight: 400;
   height: 100%;
   letter-spacing: .25px;
   max-width: 100%;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  position: relative;
-  width: 100%;
   word-wrap: break-word; // Internet Explorer 5.5+
 }
 
@@ -53,7 +51,6 @@ a {
 
 ul,
 li {
-  display: block;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -71,19 +68,11 @@ strong {
   font-weight: 500;
 }
 
-div,
-ul,
-li,
-form,
-header {
-  @extend .clearfix;
-}
-
 input,
 button {
-  color: #555;
-  font-family: $font-primary;
-  font-size: 14px;
+  color: $color-input;
+  font-family: $font-family-primary;
+  font-size: $font-size-primary;
   padding: 1px;
 
   // Fixes Firefox padding issue
@@ -98,10 +87,8 @@ input[type="submit"],
 input[type="button"],
 button {
   @include appearance(none);
-  @include border-radius(2px);
   background: none;
   cursor: pointer;
-  white-space: nowrap;
   -webkit-font-smoothing: subpixel-antialiased !important;
 
   &:hover {
@@ -109,70 +96,38 @@ button {
   }
 }
 
-input[type="text"] {
-  @include input-placeholder {
-    color: #999;
-    font-weight: 400;
-    opacity: 1;
+input[type="text"],
+input[type="password"] {
+  // Override Google autocomplete
+  &:-webkit-autofill {
+    -webkit-text-fill-color: $color-input !important;
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+  }
+
+  // Hide IE clear button (X)
+  &::-ms-clear {
+    display: none;
+    height: 0;
+    width : 0;
   }
 }
 
-  input[type="text"],
-  input[type="password"] {
-    // Override Google autocomplete
-    &:-webkit-autofill {
-      -webkit-text-fill-color: $color-input !important;
-      -webkit-box-shadow: 0 0 0px 1000px white inset;
-    }
+input[type="checkbox"] {
+  @include appearance(checkbox);
+}
 
-    // Hide IE clear button (X)
-    &::-ms-clear {
-      display: none;
-      height: 0;
-      width : 0;
-    }
-  }
+input[type="radio"] {
+  @include appearance(radio);
+}
 
 textarea {
   resize: vertical;
 }
 
 select {
-  @include border-radius(5px);
-  background: #f8f8f8;
-  border-bottom: 2px solid #c3c3c3;
-  color: #444;
-  font-family: $font-primary;
-  font-size: 14px !important;
-  height: 30px;
-  margin: 0 0 10px 0;
-  padding: 4px; // Does anything?
-  vertical-align: middle;
-
   // Fix Firefox focus issue
   &:-moz-focusring {
     color: transparent;
     text-shadow: 0 0 0 #000;
   }
-}
-
-input[type="checkbox"],
-input[type="radio"] {
-  cursor: pointer;
-  display: table-cell;
-  float: left;
-  margin: 4px 10px 0 0;
-  vertical-align: middle;
-}
-
-  input[type="checkbox"] {
-    @include appearance(checkbox);
-  }
-
-  input[type="radio"] {
-    @include appearance(radio);
-  }
-
-label {
-  cursor: pointer;
 }

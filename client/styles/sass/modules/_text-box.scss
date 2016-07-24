@@ -8,7 +8,7 @@
   border: 1px solid #d0d0d0;
   color: $color-input;
   display: block;
-  font-family: $font-primary;
+  font-family: $font-family-primary;
   font-size: 15px;
   letter-spacing: .5px;
   line-height: 35px;
@@ -19,9 +19,16 @@
   width: 100%;
 
   input {
+    color: #555;
     font-size: inherit;
     line-height: inherit;
     width: 100%;
+
+    @include input-placeholder {
+      color: #999;
+      font-weight: 400;
+      opacity: 1;
+    }
   }
 
   .icon {
