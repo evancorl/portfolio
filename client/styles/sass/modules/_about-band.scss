@@ -58,7 +58,12 @@
 }
 
 @include breakpoint($breakpoint-mobile) {
-  .about-item {
-    width: 50%;
+  .about-subtitle {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
   }
+
+    .about-item {
+      width: 50%;
+    }
 }
