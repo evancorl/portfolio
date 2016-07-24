@@ -3,15 +3,15 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 
-import AppContainer from '../containers/app';
-import AboutPage from '../pages/about';
-import ContactPage from '../pages/contact';
-import DemoPage from '../pages/demo';
-import LoadingSpinner from '../components/utility/loading-spinner';
-import LoginPage from '../pages/login';
-import ProjectsPage from '../pages/projects';
-import ResumePage from '../pages/resume';
-import SignupPage from '../pages/sign-up';
+import AppContainer from '../containers/AppContainer';
+import AboutPage from '../pages/AboutPage';
+import ContactPage from '../pages/ContactPage';
+import DemoPage from '../pages/DemoPage';
+import LoadingSpinner from '../components/Utility/LoadingSpinner';
+import LoginPage from '../pages/LoginPage';
+import ProjectsPage from '../pages/ProjectsPage';
+import ResumePage from '../pages/ResumePage';
+import SignupPage from '../pages/SignupPage';
 
 const scrollToTop = () => window.scrollTo(0, 0);
 
