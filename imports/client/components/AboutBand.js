@@ -25,7 +25,7 @@ class AboutBand extends React.Component {
               mollit anim id est laborum.
             </p>
             <h2 className="about-subtitle">
-              My favorite languages:
+              My favorite languages
             </h2>
             <ul className="language-list about-list">
               {languages.map((language, i) => (
@@ -35,7 +35,7 @@ class AboutBand extends React.Component {
               ))}
             </ul>
             <h2 className="about-subtitle">
-              My favorite tools:
+              My favorite tools
             </h2>
             <ul className="tool-list about-list">
               {tools.map((tool, i) => (
