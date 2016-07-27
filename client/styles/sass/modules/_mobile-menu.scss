@@ -3,8 +3,9 @@
 .mobile-menu {
   @include header-dark-theme;
   bottom: 0;
+  border-top: 1px solid #222;
   display: none;
-  line-height: 46px;
+  line-height: $height-header;
   position: fixed;
   width: 100%;
 }
