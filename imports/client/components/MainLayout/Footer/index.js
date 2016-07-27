@@ -12,13 +12,13 @@ class Footer extends React.Component {
   render() {
     const emailAddress = 'info@evancorl.com';
     const siteUrl = Meteor.absoluteUrl.defaultOptions.rootUrl;
+    const siteTitle = encodeURI('Evan Corl | Houston Web and App Developer');
 
     const shareList = {
       Facebook: `https://www.facebook.com/sharer/sharer.php?u=${siteUrl}`,
       Twitter: `https://twitter.com/home?status=${siteUrl}`,
       Google: `https://plus.google.com/share?url=${siteUrl}`,
-      LinkedIn: `https://www.linkedin.com/shareArticle?mini=true&url=${siteUrl}` +
-                '&title=Evan%20Corl%20%7C%20Houston%20Web%20and%20App%20Developer',
+      LinkedIn: `https://www.linkedin.com/shareArticle?mini=true&url=${siteUrl}&title=${siteTitle}`,
     };
 
     const connectList = {
