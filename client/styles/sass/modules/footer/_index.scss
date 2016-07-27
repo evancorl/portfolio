@@ -1,0 +1,39 @@
+// *  *  *  *  *  *  FOOTER  *  *  *  *  *  * //
+
+.footer {
+  background-color: #313131;
+  clear: both;
+  color: #ddd;
+  overflow: hidden;
+  padding-top: 20px;
+}
+
+  .footer-col {
+    float: left;
+    margin-bottom: 20px;
+    width: (100/3) * 1%;
+  }
+
+    .footer-title {
+      color: #ddd;
+      font-size: 25px;
+      font-weight: 100;
+      margin-bottom: 15px;
+    }
+
+@include breakpoint($breakpoint-single-col) {
+  .footer-col {
+    margin-bottom: 35px;
+    width: 50%;
+  }
+}
+
+@include breakpoint($breakpoint-mobile) {
+  .footer-col {
+    width: 100%;
+  }
+}
+
+@import './footer-connect-list';
+@import './footer-copyright';
+@import './footer-share-list';

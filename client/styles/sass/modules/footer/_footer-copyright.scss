@@ -1,0 +1,16 @@
+// *  *  *  *  *  *  FOOTER COPYRIGHT  *  *  *  *  *  * //
+
+.footer-copyright {
+  text-align: right;
+}
+
+  .footer-rights-reserved {
+    line-height: $line-height-footer;
+  }
+
+@include breakpoint($breakpoint-single-col) {
+  .footer-copyright {
+    text-align: left;
+    width: 100%;
+  }
+}

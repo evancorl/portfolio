@@ -1,0 +1,20 @@
+// *  *  *  *  *  *  FOOTER CONNECT LIST  *  *  *  *  *  * //
+
+.footer-connect-list {
+  font-size: 16px;
+}
+
+  .footer-connect-item {
+    display: inline-block;
+    line-height: $line-height-footer;
+    margin-right: 20px;
+
+    &:before {
+      color: $color-action;
+      margin-right: 10px;
+    }
+
+    a {
+      color: #ddd;
+    }
+  }
