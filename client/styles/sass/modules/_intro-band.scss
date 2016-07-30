@@ -25,12 +25,19 @@
     .intro-body {
       font-size: 35px;
       font-weight: 100;
+      margin-bottom: 30px;
     }
 
       .intro-love {
         color: $color-action;
         font-weight: 400;
       }
+
+    .intro-contact-btn {
+      font-size: 23px;
+      font-weight: 100;
+      padding: 7.5px 12.5px;
+    }
 
 @include breakpoint($breakpoint-single-col) {
   .intro-photo {
