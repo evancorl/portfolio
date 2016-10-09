@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router';
 import Scroll from 'react-scroll';
 
 const ScrollElement = Scroll.Element;
+const ScrollLink = Scroll.Link;
 
 class Introduction extends React.Component {
   shouldComponentUpdate() {
@@ -24,7 +24,13 @@ class Introduction extends React.Component {
                 <span className="intro-love">love </span>
                 <span>web and mobile app development.</span>
               </p>
-              <Link to="/contact" className="intro-contact-btn button red">Contact Me</Link>
+              <ScrollLink
+                className="intro-contact-btn button red"
+                to="contact"
+                smooth={true}
+                offset={-50}
+                duration={500}
+              >Contact Me</ScrollLink>
             </div>
           </div>
         </div>

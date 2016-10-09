@@ -1,11 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router';
+import Scroll from 'react-scroll';
+
+const ScrollLink = Scroll.Link;
 
 const MainMenuItem = ({ link }) => (
   <li className="main-menu-item">
-    <Link to={`/${link.toLowerCase()}`} className="active-border" activeClassName="active">
+    <ScrollLink
+      className="active-border"
+      to={`${link.toLowerCase()}`}
+      smooth={true}
+      offset={-50}
+      duration={500}>
       {link}
-    </Link>
+    </ScrollLink>
   </li>
 );
 
