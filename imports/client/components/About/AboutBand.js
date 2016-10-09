@@ -7,7 +7,7 @@ class AboutBand extends React.Component {
 
   render() {
     const languages = ['HTML', 'CSS', 'JavaScript', 'SQL', 'PHP', 'C#'];
-    const tools = ['Meteor', 'React', 'Sass', 'Mongo', 'NPM', 'GitHub'];
+    const tools = ['Meteor', 'React', 'Sass', 'Mongo', 'MySQL', 'NPM'];
 
     return (
       <div className="about-band inner-ver">
