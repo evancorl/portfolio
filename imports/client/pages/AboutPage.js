@@ -3,6 +3,7 @@ import React from 'react';
 import IntroBand from '../components/About/IntroBand';
 import AboutBand from '../components/About/AboutBand';
 import ProjectsBand from '../components/About/ProjectsBand';
+import ContactForm from '../components/Contact/ContactForm';
 
 class AboutPage extends React.Component {
   shouldComponentUpdate() {
@@ -15,6 +16,7 @@ class AboutPage extends React.Component {
         <IntroBand />
         <AboutBand />
         <ProjectsBand />
+        <ContactForm />
       </div>
     );
   }
