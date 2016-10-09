@@ -1,5 +1,6 @@
 import '../../api/server';
 import '../facebook';
+import '../methods';
 import seedData from '../seed-data';
 
 Meteor.startup(() => {
