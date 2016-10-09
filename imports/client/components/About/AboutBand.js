@@ -1,4 +1,7 @@
 import React from 'react';
+import Scroll from 'react-scroll';
+
+const ScrollElement = Scroll.Element;
 
 class AboutBand extends React.Component {
   shouldComponentUpdate() {
@@ -10,7 +13,7 @@ class AboutBand extends React.Component {
     const tools = ['Meteor', 'React', 'Sass', 'Mongo', 'MySQL', 'NPM'];
 
     return (
-      <div className="about-band inner-ver">
+      <ScrollElement name="about" id="about" className="about-band inner-ver">
         <div className="inner-hor">
           <div className="col-wide">
             <h1 className="about-title">About</h1>
@@ -41,7 +44,7 @@ class AboutBand extends React.Component {
             </ul>
           </div>
         </div>
-      </div>
+      </ScrollElement>
     );
   }
 }

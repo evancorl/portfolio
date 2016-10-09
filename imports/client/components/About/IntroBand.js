@@ -1,5 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router';
+import Scroll from 'react-scroll';
+
+const ScrollElement = Scroll.Element;
 
 class Introduction extends React.Component {
   shouldComponentUpdate() {
@@ -8,7 +11,7 @@ class Introduction extends React.Component {
 
   render() {
     return (
-      <div className="intro-band">
+      <ScrollElement name="intro" id="intro" className="intro-band">
         <div className="inner-hor">
           <div className="col-wide intro-col">
             <img src="/images/me.jpg" className="intro-photo" />
@@ -25,7 +28,7 @@ class Introduction extends React.Component {
             </div>
           </div>
         </div>
-      </div>
+      </ScrollElement>
     );
   }
 }
