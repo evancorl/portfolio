@@ -1,6 +1,7 @@
 // *  *  *  *  *  *  COLUMN  *  *  *  *  *  * //
 
 .col {
+  clear: both;
   margin: 0 auto;
   max-width: 100%;
 }
@@ -21,28 +22,24 @@
 
   .col-wide {
     @extend .col;
-    clear: both;
     max-width: $width-col-wide-max;
     width: 100%;
   }
 
-  // .col-center-lg {
-  //   @extend .col;
-  //   clear: both;
-  //   width: 800px;
-  // }
+  .col-center-lg {
+    @extend .col;
+    width: 800px;
+  }
 
-  // .col-center-md {
-  //   @extend .col;
-  //   clear: both;
-  //   width: 620px;
-  // }
+  .col-center-md {
+    @extend .col;
+    width: 620px;
+  }
 
-  // .col-center-sm {
-  //   @extend .col;
-  //   clear: both;
-  //   width: 320px;
-  // }
+  .col-center-sm {
+    @extend .col;
+    width: 320px;
+  }
 
 @include breakpoint($breakpoint-single-col) {
   #main-content {
