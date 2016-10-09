@@ -15,8 +15,8 @@ class ProjectItem extends React.Component {
 
     return (
       <div className="project-item">
-        <a href={project.url || poeticUrl} target="_blank" className="project-img-wrapper">
-          <div className="project-overlay"></div>
+        <a href={project.url || poeticUrl} target="_blank" className="project-img-container">
+          <div className="project-img-overlay"></div>
           <img className="project-img" src={project.image} />
         </a>
         <div className="project-info">
