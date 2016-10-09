@@ -1,0 +1,112 @@
+.projects-band {
+  background-color: #fff;
+  overflow: hidden;
+}
+
+  .projects-title {
+    font-size: 55px;
+    font-weight: 100;
+    margin-bottom: 35px;
+  }
+
+  .project-list {
+    overflow: hidden;
+  }
+
+    .project-item {
+      @include box-sizing(border-box);
+      margin-bottom: 80px;
+      overflow: hidden;
+    }
+
+      .project-img-container {
+        float: left;
+        position: relative;
+        width: 47%;
+      }
+
+        .project-img {
+          display: block;
+        }
+
+        .project-img-overlay {
+          @include stretch(0, 0, 0, 0);
+          background-color: rgba(0, 0, 0, 0.2);
+          color: #FFF;
+          height: 100%;
+          margin: 0;
+          opacity: 0;
+          overflow: hidden;
+          width: 100%;
+
+          &:hover {
+            opacity: 1;
+            text-decoration: none;
+          }
+        }
+
+      .project-info {
+        float: right;
+        width: 47%;
+      }
+
+        .project-name {
+          font-size: 31px;
+          font-weight: 100;
+          margin-bottom: 15px;
+        }
+
+        .project-description {
+          @include border-radius(3px);
+          background-color: #f9f9f9;
+          font-size: 17px;
+          margin-bottom: 15px;
+          padding: 10px;
+        }
+
+        .project-subtitle {
+          display: inline-block;
+          font-size: 18px;
+          font-weight: 400;
+          margin-bottom: 5px;
+          margin-right: 10px;
+        }
+
+        .project-info-list {
+          display: block;
+          margin-bottom: 15px;
+          margin-left: 10px;
+        }
+
+        .project-info-list-item {
+          display: inline-block;
+
+          &:after {
+            content: ',';
+            margin-right: 5px;
+          }
+
+          &:last-child:after {
+            content: '';
+            margin-right: 0;
+          }
+        }
+
+      .project-btn {
+        float: right;
+        font-size: 21px;
+        font-weight: 100;
+        margin-top: 3px;
+        padding: 7.5px 12.5px;
+      }
+
+@include breakpoint($breakpoint-single-col) {
+  .project-img-container,
+  .project-info {
+    width: 100%;
+  }
+
+  .project-img-container {
+    margin-bottom: 20px;
+  }
+}
