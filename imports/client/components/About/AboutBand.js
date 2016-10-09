@@ -13,9 +13,7 @@ class AboutBand extends React.Component {
       <div className="about-band inner-ver">
         <div className="inner-hor">
           <div className="col-wide">
-            <h1 className="about-title">
-              About
-            </h1>
+            <h1 className="about-title">About</h1>
             <p className="about-text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
               incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -24,9 +22,7 @@ class AboutBand extends React.Component {
               Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
               mollit anim id est laborum.
             </p>
-            <h2 className="about-subtitle">
-              My favorite languages
-            </h2>
+            <h2 className="about-subtitle">My favorite languages</h2>
             <ul className="language-list about-list">
               {languages.map((language, i) => (
                 <li key={i} className="language-item about-item">
@@ -34,9 +30,7 @@ class AboutBand extends React.Component {
                 </li>
               ))}
             </ul>
-            <h2 className="about-subtitle">
-              My favorite tools
-            </h2>
+            <h2 className="about-subtitle">My favorite tools</h2>
             <ul className="tool-list about-list">
               {tools.map((tool, i) => (
                 <li key={i} className="tool-item about-item">

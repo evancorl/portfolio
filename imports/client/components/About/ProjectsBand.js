@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ProjectListContainer from '../containers/ProjectListContainer';
+import ProjectListContainer from '../../containers/ProjectListContainer';
 
 class ProjectsBand extends React.Component {
   shouldComponentUpdate() {

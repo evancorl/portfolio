@@ -1,8 +1,8 @@
 import React from 'react';
 
-import AboutBand from '../components/AboutBand';
-import IntroBand from '../components/IntroBand';
-import ProjectsBand from '../components/ProjectsBand';
+import IntroBand from '../components/About/IntroBand';
+import AboutBand from '../components/About/AboutBand';
+import ProjectsBand from '../components/About/ProjectsBand';
 
 class AboutPage extends React.Component {
   shouldComponentUpdate() {
