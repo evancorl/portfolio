@@ -1,6 +1,7 @@
 import React from 'react';
 import Scroll from 'react-scroll';
 
+import LoadingSpinner from '../Utility/LoadingSpinner';
 import TextBox from '../Utility/TextBox';
 
 const ScrollElement = Scroll.Element;
@@ -15,7 +16,7 @@ class ContactForm extends React.Component {
       <ScrollElement name="contact" id="contact" className="inner-ver inner-hor">
         <div className="col-center-md">
           <h1 className="contact-title">Contact</h1>
-          <form action="/login" method="post" className="contact-form" onSubmit={this.submitForm}>
+          <form action="/" method="post" className="contact-form" onSubmit={this.submitForm}>
             <TextBox
               type="text"
               name="name"
