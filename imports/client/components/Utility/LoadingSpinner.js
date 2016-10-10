@@ -11,7 +11,7 @@ class LoadingSpinner extends React.Component {
 
     return (
       <div className={loadingSpinnerClass}>
-        <img src="/images/loading.svg" />
+        <img src="/images/loading-red.svg" />
       </div>
     );
   }
