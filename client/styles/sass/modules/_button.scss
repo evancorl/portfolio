@@ -40,10 +40,6 @@
     &:active {
       background-color: $color-btn-red-hover;
     }
-
-    &:disabled {
-      background-color: $color-btn-disabled;
-    }
   }
 
   &.green {
@@ -52,10 +48,6 @@
     &:hover,
     &:active {
       background-color: $color-btn-green-hover;
-    }
-
-    &:disabled {
-      background-color: $color-btn-disabled;
     }
   }
 }
