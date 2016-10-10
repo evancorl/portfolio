@@ -105,7 +105,7 @@ class EzForm extends React.Component {
   }
 
   validateForm(inputs) {
-    const isValid = this.validator.validate(inputs);
+    const isValid = this.validator.validateSchema(inputs);
 
     this.setState({
       isValid,

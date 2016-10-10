@@ -1,11 +1,11 @@
+import { Meteor } from 'meteor/meteor';
+
 class EzValidator {
   constructor(schema) {
     this.schema = schema;
     this.schemaKeys = this.getSchemaKeys(schema);
 
-    this.isValid = true;
-    this.invalidKeys = [];
-    this.errorMessages = {};
+    this.resetState();
   }
 
   getSchemaKeys(schema) {
@@ -16,8 +16,9 @@ class EzValidator {
     return keys;
   }
 
-  validate(schemaInstance, breakOnFirstError = false) {
+  validateSchema(schemaInstance, throwErrors = false) {
     this.resetState();
+    this.throwErrors = throwErrors;
 
     for (let i = 0; i < this.schemaKeys.length; i++) {
       const key = this.schemaKeys[i];
@@ -32,8 +33,6 @@ class EzValidator {
         input.displayName = schemaDef.displayName || (key.charAt(0).toUpperCase() + key.slice(1));
 
         const isRequired = this.checkRequired(input, schemaDef);
-
-        if (isRequired && breakOnFirstError) break;
       } else {
         this.isValid = false;
       }
@@ -46,6 +45,7 @@ class EzValidator {
     this.isValid = true;
     this.invalidKeys = [];
     this.errorMessages = {};
+    this.throwErrors = false;
   }
 
   checkRequired(input, schemaDef) {
@@ -69,6 +69,10 @@ class EzValidator {
     this.isValid = false;
     this.invalidKeys.push(key);
     this.errorMessages[key] = errorMessage;
+
+    if (this.throwErrors) {
+      throw new Meteor.Error('invalidForm', errorMessage);
+    }
   }
 
   getFirstErrorMessage() {
