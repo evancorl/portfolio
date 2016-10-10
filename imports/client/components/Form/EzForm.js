@@ -21,6 +21,14 @@ class EzForm extends React.Component {
     };
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.asyncErrorMessage) {
+      this.setState({
+        isValid: false,
+      });
+    }
+  }
+
   shouldComponentUpdate(nextProps, nextState) {
     return this.state.isValid !== nextState.isValid || this.state.invalidKeys !== nextState.invalidKeys;
   }
@@ -114,6 +122,7 @@ class EzForm extends React.Component {
       beforeSubmit,
       onSuccess,
       onError,
+      asyncErrorMessage,
       ...other,
     } = this.props;
 
@@ -128,10 +137,15 @@ class EzForm extends React.Component {
 }
 
 EzForm.propTypes = {
+  schema: React.PropTypes.object.isRequired,
   beforeSubmit: React.PropTypes.func,
   onSuccess: React.PropTypes.func,
   onError: React.PropTypes.func,
-  schema: React.PropTypes.object.isRequired,
+  asyncErrorMessage: React.PropTypes.string,
+};
+
+EzInput.defaultProps = {
+  asyncErrorMessage: null,
 };
 
 export default EzForm;
