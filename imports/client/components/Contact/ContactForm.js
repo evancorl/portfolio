@@ -1,46 +1,88 @@
+import { Meteor } from 'meteor/meteor';
 import React from 'react';
 import Scroll from 'react-scroll';
 
-import LoadingSpinner from '../Utility/LoadingSpinner';
-import TextBox from '../Utility/TextBox';
+import { EzForm } from '../../../modules/ezform';
+import contactFormSchema from '../../../modules/schemas/contact-form';
 
 const ScrollElement = Scroll.Element;
 
 class ContactForm extends React.Component {
-  submitForm(event) {
-    event.preventDefault();
+  constructor(props) {
+    super(props);
+
+    this.submitForm = this.submitForm.bind(this);
+
+    this.state = {
+      isSubmitting: false,
+      serverErrorMessage: null,
+      submittedSuccessfully: false,
+    };
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    return this.state.isSubmitting !== nextState.isSubmitting ||
+      this.state.serverErrorMessage !== nextState.serverErrorMessage ||
+      this.state.submittedSuccessfully !== nextState.submittedSuccessfully;
+  }
+
+  submitForm(form) {
+    this.setState({
+      isSubmitting: true,
+    });
+
+    Meteor.call('contactForm.submit', form, error => {
+      const newState = {
+        isSubmitting: false,
+      };
+
+      if (error) {
+        const serverErrorMessage = error.error === 'invalidForm'
+          ? error.reason
+          : 'Uh oh, some boring server stuff malfunctioned. Would you mind trying again?';
+
+        newState.serverErrorMessage = serverErrorMessage;
+      } else {
+        newState.submittedSuccessfully = true;
+      }
+
+      this.setState(newState);
+    });
   }
 
   render() {
+    const { serverErrorMessage } = this.state;
+
     return (
       <ScrollElement name="contact" id="contact" className="inner-ver inner-hor">
         <div className="col-center-md">
           <h1 className="contact-title">Contact</h1>
-          <form action="/" method="post" className="contact-form" onSubmit={this.submitForm}>
-            <TextBox
-              type="text"
+          <EzForm
+            schema={contactFormSchema}
+            onSuccess={this.submitForm}
+            asyncErrorMessage={serverErrorMessage}
+            className="contact-form">
+            <input
               name="name"
-              placeholder="Name"
-              className="text-box-spacing text-box-no-border"
-              required
-            />
-            <TextBox
               type="text"
+              placeholder="Name"
+              className="text-box text-box-spacing text-box-no-border"
+            />
+            <input
               name="emailAddress"
+              type="text"
               placeholder="Email address"
-              className="text-box-spacing text-box-no-border"
-              required
+              className="text-box text-box-spacing text-box-no-border"
             />
             <textarea
               name="message"
               placeholder="Message"
               className="text-box text-box-spacing text-box-no-border"
               rows="6"
-              required
-            >
-            </textarea>
+            ></textarea>
+            {serverErrorMessage}
             <button type="submit" className="button red contact-btn">Send</button>
-          </form>
+          </EzForm>
         </div>
       </ScrollElement>
     );
