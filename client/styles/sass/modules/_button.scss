@@ -23,6 +23,10 @@
     text-decoration: none;
   }
 
+  &:disabled {
+    cursor: auto;
+  }
+
   &.icon:before {
     font-size: initial;
     margin: 0 6px 0 0;
@@ -36,6 +40,10 @@
     &:active {
       background-color: $color-btn-red-hover;
     }
+
+    &:disabled {
+      background-color: #aaa;
+    }
   }
 
   &.green {
@@ -44,6 +52,10 @@
     &:hover,
     &:active {
       background-color: $color-btn-green-hover;
+    }
+
+    &:disabled {
+      background-color: #aaa;
     }
   }
 }
