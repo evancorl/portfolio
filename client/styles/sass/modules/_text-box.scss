@@ -5,7 +5,6 @@
   @include box-sizing(border-box);
 
   background-color: #fff;
-  border: 1px solid #d0d0d0;
   color: $color-input;
   display: block;
   font-family: $font-family-primary;
@@ -55,16 +54,25 @@ textarea.text-box {
   padding-top: 10px;
 }
 
-.text-box-no-border {
-  border: none;
-}
-
 .text-box-inverse-bg,
 .text-box-inverse-bg input {
   background-color: #f4f4f4;
-  border: none;
 }
 
 .text-box-spacing {
+  margin-bottom: 25px;
+}
+
+// *  *  *  *  *  *  FORMS/INPUTS  *  *  *  *  *  * //
+
+.ez-error .text-box {
+  background: #fff3f4;
+  margin-bottom: 5px;
+}
+
+.ez-error-msg {
+  color: #e08186;
+  display: block;
+  font-size: 16px;
   margin-bottom: 25px;
 }
