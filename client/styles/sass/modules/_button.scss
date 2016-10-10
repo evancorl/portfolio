@@ -42,7 +42,7 @@
     }
 
     &:disabled {
-      background-color: #aaa;
+      background-color: $color-btn-disabled;
     }
   }
 
@@ -55,7 +55,7 @@
     }
 
     &:disabled {
-      background-color: #aaa;
+      background-color: $color-btn-disabled;
     }
   }
 }
