@@ -10,20 +10,55 @@ const ScrollElement = Scroll.Element;
 class ContactForm extends React.Component {
   constructor(props) {
     super(props);
-
     this.submitForm = this.submitForm.bind(this);
 
     this.state = {
       isSubmitting: false,
       serverErrorMessage: null,
-      submittedSuccessfully: false,
+      formSent: false,
     };
   }
 
   shouldComponentUpdate(nextProps, nextState) {
     return this.state.isSubmitting !== nextState.isSubmitting ||
       this.state.serverErrorMessage !== nextState.serverErrorMessage ||
-      this.state.submittedSuccessfully !== nextState.submittedSuccessfully;
+      this.state.formSent !== nextState.formSent;
+  }
+
+  renderForm() {
+    const { isSubmitting, serverErrorMessage } = this.state;
+
+    return(
+      <EzForm
+        schema={contactFormSchema}
+        onSuccess={this.submitForm}
+        isSubmitting={isSubmitting}
+        asyncErrorMessage={serverErrorMessage}
+        className="contact-form">
+        <input
+          name="name"
+          type="text"
+          placeholder="Name"
+          className="text-box text-box-spacing"
+        />
+        <input
+          name="emailAddress"
+          type="text"
+          placeholder="Email address"
+          className="text-box text-box-spacing"
+        />
+        <textarea
+          name="message"
+          placeholder="Message"
+          className="text-box text-box-spacing"
+          rows="6"
+        ></textarea>
+        {serverErrorMessage}
+        <button type="submit" className="button red contact-btn" disabled={isSubmitting}>
+          {isSubmitting ? <img src="/images/loading-white.svg" /> : 'Send'}
+        </button>
+      </EzForm>
+    );
   }
 
   submitForm(form) {
@@ -43,46 +78,29 @@ class ContactForm extends React.Component {
 
         newState.serverErrorMessage = serverErrorMessage;
       } else {
-        newState.submittedSuccessfully = true;
+        newState.formSent = true;
       }
 
-      this.setState(newState);
+      Meteor.setTimeout(() => this.setState(newState), 1000);
     });
   }
 
   render() {
-    const { serverErrorMessage } = this.state;
+    const { formSent } = this.state;
 
     return (
       <ScrollElement name="contact" id="contact" className="inner-ver inner-hor">
         <div className="col-center-md">
           <h1 className="contact-title">Contact</h1>
-          <EzForm
-            schema={contactFormSchema}
-            onSuccess={this.submitForm}
-            asyncErrorMessage={serverErrorMessage}
-            className="contact-form">
-            <input
-              name="name"
-              type="text"
-              placeholder="Name"
-              className="text-box text-box-spacing text-box-no-border"
-            />
-            <input
-              name="emailAddress"
-              type="text"
-              placeholder="Email address"
-              className="text-box text-box-spacing text-box-no-border"
-            />
-            <textarea
-              name="message"
-              placeholder="Message"
-              className="text-box text-box-spacing text-box-no-border"
-              rows="6"
-            ></textarea>
-            {serverErrorMessage}
-            <button type="submit" className="button red contact-btn">Send</button>
-          </EzForm>
+          {
+            formSent
+            ? null
+            : this.renderForm()
+          }
+          <div className={formSent ? 'contact-form-sent' : 'hide'}>
+            <img src="/images/success.gif" />
+            <p>Message sent! I'm excited to get back to you.</p>
+          </div>          
         </div>
       </ScrollElement>
     );
