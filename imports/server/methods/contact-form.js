@@ -1,23 +1,24 @@
 import { Meteor } from 'meteor/meteor';
-import { check } from 'meteor/check';
 import { Email } from 'meteor/email';
 
-const { ADMIN_EMAIL } = Meteor.settings;
+import { EzValidator } from '../../modules/ezform';
+import contactFormSchema from '../../modules/schemas/contact-form';
+
+const { CONTACT_EMAIL } = Meteor.settings;
 
 Meteor.methods({
   'contactForm.submit'(form) {
-    const { name, email, message } = form;
+    const { name, emailAddress, message } = form;
+    const validator = new EzValidator(contactFormSchema);
 
-    check(name, String);
-    check(email, String);
-    check(message, String);
+    validator.validateSchema(form, true);
 
     Email.send({
-      to: ADMIN_EMAIL,
-      from: email,
-      subject: 'Contact form message from ' + name,
+      to: CONTACT_EMAIL,
+      from: `evancorl.com <admin@evancorl.com>`,
+      subject: `Contact form message from ${name}`,
       text: message,
-      replyTo: email,
+      replyTo: `${emailAddress} <${emailAddress}>`,
     });
   },
 });
