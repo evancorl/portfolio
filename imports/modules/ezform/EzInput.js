@@ -7,10 +7,6 @@ class EzInput extends React.Component {
     this.renderErrorMessage = this.renderErrorMessage.bind(this);
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
-    return this.props.errorMessage !== nextProps.errorMessage;
-  }
-
   renderErrorMessage(placement) {
     const { errorMessage, errorBeforeInput } = this.props;
 

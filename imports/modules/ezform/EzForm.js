@@ -29,10 +29,6 @@ class EzForm extends React.Component {
     }
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
-    return this.state.isValid !== nextState.isValid || this.state.invalidKeys !== nextState.invalidKeys;
-  }
-
   renderChildren() {
     return React.Children.map(this.props.children, child => {
       const childType = child ? child.type : null;
@@ -109,6 +105,7 @@ class EzForm extends React.Component {
       beforeSubmit,
       onSuccess,
       onError,
+      isSubmitting,
       asyncErrorMessage,
       ...other,
     } = this.props;
@@ -128,10 +125,12 @@ EzForm.propTypes = {
   beforeSubmit: React.PropTypes.func,
   onSuccess: React.PropTypes.func,
   onError: React.PropTypes.func,
+  isSubmitting: React.PropTypes.bool,
   asyncErrorMessage: React.PropTypes.string,
 };
 
 EzInput.defaultProps = {
+  isSubmitting: false,
   asyncErrorMessage: null,
 };
 
