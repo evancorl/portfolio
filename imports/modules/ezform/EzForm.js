@@ -56,12 +56,11 @@ class EzForm extends React.Component {
     event.preventDefault();
 
     const { beforeSubmit, onError, onSuccess } = this.props;
+
     const form = event.currentTarget;
     const inputs = this.collectInputs(form);
 
     if (beforeSubmit) beforeSubmit(inputs);
-
-    this.toggleButtons(form, true);
 
     const isFormValid = this.validateForm(inputs);
 
@@ -70,8 +69,6 @@ class EzForm extends React.Component {
     } else if (isFormValid && onSuccess) {
       onSuccess(inputs);
     }
-
-    this.toggleButtons(form, false);
 
     return isFormValid;
   }
@@ -92,16 +89,6 @@ class EzForm extends React.Component {
     });
 
     return formattedInputs;
-  }
-
-  toggleButtons(form, disable) {
-    const buttons = form.getElementsByTagName('button');
-
-    for (let i = 0; i < buttons.length; i++) {
-      const button = buttons[i];
-
-      button.disabled = disable;
-    }
   }
 
   validateForm(inputs) {
