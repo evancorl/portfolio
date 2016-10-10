@@ -11,7 +11,7 @@ const contactFormSchema = {
   },
   message: {
     messages: {
-      required: 'Please don\'t give me the silent treatment :\\',
+      required: 'Please don\'t give me the silent treatment :(',
     },
   }
 };
