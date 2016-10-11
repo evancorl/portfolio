@@ -1,4 +1,4 @@
-import renderRoutes from './Routes';
+import renderRoutes from './routes';
 
 Meteor.startup(() => {
   renderRoutes();
