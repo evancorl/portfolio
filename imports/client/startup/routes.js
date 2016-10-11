@@ -8,6 +8,7 @@ import AboutPage from '../pages/AboutPage';
 import DemoPage from '../pages/DemoPage';
 import LoadingSpinner from '../components/Utility/LoadingSpinner';
 import LoginPage from '../pages/LoginPage';
+import NotFoundPage from '../pages/NotFoundPage';
 
 const route = (path, component, onEnter) => (
   <Route path={path} component={component} onEnter={onEnter} />
@@ -29,6 +30,7 @@ const renderRoutes = () => {
         {route('post', null)}
         {route('login', LoginPage)}
         {route('logout', LoadingSpinner, logout)}
+        {route('*', NotFoundPage)}
       </Route>
     </Router>,
     document.getElementById('react-root')
