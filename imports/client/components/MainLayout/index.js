@@ -2,7 +2,6 @@ import React from 'react';
 
 import HeaderPrimary from './HeaderPrimary';
 import Footer from './Footer';
-import MobileMenu from './MobileMenu';
 
 class MainLayout extends React.Component {
   getChildContext() {
@@ -15,8 +14,6 @@ class MainLayout extends React.Component {
   }
 
   render() {
-    const mobileMenuLinks = ['Home', 'About', 'Projects', 'Demo', 'Resume'];
-
     return this.props.currentUser === undefined ? null : (
       <div id="app-container">
         <HeaderPrimary />
@@ -25,8 +22,6 @@ class MainLayout extends React.Component {
           {this.props.children}
         </main>
         <Footer />
-        <div className="header-spacer-mobile"></div>
-        <MobileMenu links={mobileMenuLinks} />
       </div>
     );
   }

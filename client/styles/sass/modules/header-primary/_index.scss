@@ -18,26 +18,10 @@
     margin: 9px 0 0 0;
   }
 
-.header-spacer,
-.header-spacer-mobile {
+.header-spacer {
   display: block;
   height: $height-header;
   width: 100%;
-}
-
-.header-spacer-mobile {
-  display: none;
-}
-
-@include breakpoint($breakpoint-mobile) {
-  #header-primary,
-  .header-spacer {
-    display: none;
-  }
-
-  .header-spacer-mobile {
-    display: block;
-  }
 }
 
 @import './_logo';
