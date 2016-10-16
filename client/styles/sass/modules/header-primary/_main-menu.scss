@@ -8,14 +8,15 @@ $border-menu-item: 3px;
 }
 
   .main-menu-list {
-    overflow: hidden;
+    float: right;
+    width: 555px;
   }
 
     .main-menu-item {
       display: block;
       float: left;
       overflow: hidden;
-      text-align: center;
+      text-align: right;
       text-transform: capitalize;
       white-space: nowrap;
       width: 25%;
@@ -23,10 +24,27 @@ $border-menu-item: 3px;
       a {
         color: #fff;
         display: inline-block;
-        font-size: 16px;
+        font-size: 18px;
         letter-spacing: .3px;
         line-height: $height-header;
-        text-align: center;
-        // width: 100%;
       }
     }
+
+      .main-menu-cta {
+        @include align-items(center);
+        @include display-flex(inline-flex);
+        float: right;
+        height: $height-header;
+        margin: 0 0 0 15px;
+      }
+
+        .main-menu-cta-btn {
+          font-size: 16px;
+          margin-left: auto;
+        }
+
+@include breakpoint($breakpoint-single-col) {
+  .main-menu-list {
+    display: none;
+  }
+}

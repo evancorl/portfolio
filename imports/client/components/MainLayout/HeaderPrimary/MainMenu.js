@@ -17,21 +17,22 @@ class MainMenu extends React.Component {
     const { links } = this.props;
 
     return (
-      <nav className="main-menu col-left">
+      <nav className="main-menu">
         <ScrollLink
-          activeClass=""
           className="main-menu-logo logo"
           to="intro"
           smooth={true}
           offset={-50}
           duration={350}
         >
-          <span className="logo-text-lower">evan</span>
-          <span className="logo-text-upper">CORL</span>
+          <span>evan</span>
+          <span className="logo-text-upper">Corl</span>
         </ScrollLink>
-        <span className="header-primary-divider logo-divider"></span>
         <ul className="main-menu-list">
           {links.map((link, i) => <MainMenuItem key={i} link={link} />)}
+          <li className="main-menu-cta">
+            <Link to="/files/resume.pdf" className="main-menu-cta-btn button red ">Resume</Link>
+          </li>
         </ul>
       </nav>
     );
