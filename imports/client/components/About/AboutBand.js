@@ -9,8 +9,8 @@ class AboutBand extends React.Component {
   }
 
   render() {
-    const languages = ['HTML', 'CSS', 'JavaScript', 'SQL', 'PHP', 'C#'];
-    const tools = ['Meteor', 'React', 'Sass', 'Mongo', 'MySQL', 'NPM'];
+    const languages = ['HTML', 'CSS', 'JavaScript', 'C#', 'PHP', 'SQL'];
+    const tools = ['Meteor', 'React', 'Sass', 'ASP.NET', 'Mongo', 'MySQL'];
 
     return (
       <ScrollElement name="about" id="about" className="about-band inner-ver">
