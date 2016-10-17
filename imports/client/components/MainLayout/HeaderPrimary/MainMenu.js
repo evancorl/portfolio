@@ -37,6 +37,7 @@ class MainMenu extends React.Component {
           smooth={true}
           offset={-50}
           duration={350}
+          onClick={this.toggleMobileMenu.bind(this, false)}
         >
           <span>evan</span>
           <span className="logo-text-upper">Corl</span>
