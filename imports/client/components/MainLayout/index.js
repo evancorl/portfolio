@@ -1,6 +1,6 @@
 import React from 'react';
 
-import HeaderPrimary from './HeaderPrimary';
+import Header from './Header';
 import Footer from './Footer';
 
 class MainLayout extends React.Component {
@@ -16,7 +16,7 @@ class MainLayout extends React.Component {
   render() {
     return this.props.currentUser === undefined ? null : (
       <div id="app-container">
-        <HeaderPrimary />
+        <Header />
         <div className="header-spacer"></div>
         <main id="main-content">
           {this.props.children}
