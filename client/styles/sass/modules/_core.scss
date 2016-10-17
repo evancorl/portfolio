@@ -53,3 +53,9 @@
 .hide {
   display: none;
 }
+
+@include breakpoint($breakpoint-single-col) {
+  .single-col-hide {
+    display: none;
+  }
+}
