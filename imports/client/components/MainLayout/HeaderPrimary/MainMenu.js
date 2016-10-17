@@ -7,14 +7,27 @@ import MainMenuItem from './MainMenuItem';
 const ScrollLink = Scroll.Link;
 
 class MainMenu extends React.Component {
-  shouldComponentUpdate(nextProps, nextState, nextContext) {
-    const { location: key } = this.context;
+  constructor(props) {
+    super(props);
 
-    return key !== nextContext.location.key;
+    this.state = {
+      showMobileMenu: false,
+    };
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    return this.state.showMobileMenu !== nextState.showMobileMenu;
+  }
+
+  toggleMobileMenu(showMobileMenu) {
+    this.setState({
+      showMobileMenu: showMobileMenu,
+    });
   }
 
   render() {
     const { links } = this.props;
+    const { showMobileMenu } = this.state;
 
     return (
       <nav className="main-menu">
@@ -28,8 +41,18 @@ class MainMenu extends React.Component {
           <span>evan</span>
           <span className="logo-text-upper">Corl</span>
         </ScrollLink>
-        <ul className="main-menu-list">
-          {links.map((link, i) => <MainMenuItem key={i} link={link} />)}
+        <span
+          className="main-menu-hamburger icon icon-menu"
+          onClick={this.toggleMobileMenu.bind(this, !showMobileMenu)}
+        ></span>
+        <ul className={`main-menu-list${showMobileMenu ? '' : ' single-col-hide'}`}>
+          {links.map((link, i) => (
+            <MainMenuItem
+              key={i}
+              link={link}
+              handleClick={this.toggleMobileMenu.bind(this, false)}
+            />
+          ))}
           <li className="main-menu-cta">
             <Link to="/files/resume.pdf" className="main-menu-cta-btn button red ">Resume</Link>
           </li>
@@ -41,10 +64,6 @@ class MainMenu extends React.Component {
 
 MainMenu.propTypes = {
   links: React.PropTypes.array.isRequired,
-};
-
-MainMenu.contextTypes = {
-  location: React.PropTypes.object.isRequired,
 };
 
 export default MainMenu;
