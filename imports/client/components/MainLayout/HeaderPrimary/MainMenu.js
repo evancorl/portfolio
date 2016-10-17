@@ -42,7 +42,7 @@ class MainMenu extends React.Component {
           <span className="logo-text-upper">Corl</span>
         </ScrollLink>
         <span
-          className="main-menu-hamburger icon icon-menu"
+          className={`main-menu-hamburger icon ${showMobileMenu ? 'icon-x' : 'icon-menu'}`}
           onClick={this.toggleMobileMenu.bind(this, !showMobileMenu)}
         ></span>
         <ul className={`main-menu-list${showMobileMenu ? '' : ' single-col-hide'}`}>
@@ -54,7 +54,7 @@ class MainMenu extends React.Component {
             />
           ))}
           <li className="main-menu-cta">
-            <Link to="/files/resume.pdf" className="main-menu-cta-btn button red ">Resume</Link>
+            <Link to="/files/resume.pdf" className="main-menu-cta-btn button red">Resume</Link>
           </li>
         </ul>
       </nav>
