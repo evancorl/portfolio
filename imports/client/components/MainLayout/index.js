@@ -14,7 +14,7 @@ class MainLayout extends React.Component {
   }
 
   render() {
-    return this.props.currentUser === undefined ? null : (
+    return (
       <div id="app-container">
         <Header />
         <div className="header-spacer"></div>

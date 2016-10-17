@@ -1,10 +1,9 @@
-import { Meteor } from 'meteor/meteor';
 import { createContainer } from 'meteor/react-meteor-data';
 
 import MainLayout from '../components/MainLayout';
 
 const AppContainer = createContainer(() => {
-  const currentUser = Meteor.user();
+  const currentUser = {};
 
   return {
     currentUser,
