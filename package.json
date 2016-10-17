@@ -1,5 +1,5 @@
 {
-  "name": "skate-scenes",
+  "name": "personal-website",
   "private": true,
   "scripts": {
     "start": "meteor --settings settings.json"
