@@ -13,7 +13,7 @@ const MainMenuItem = props => {
   return (
     <li className="main-menu-item">
       <ScrollLink
-        className="active-border"
+        className="active-hover"
         to={`${link.toLowerCase()}`}
         smooth={true}
         offset={-50}
