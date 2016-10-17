@@ -17,8 +17,15 @@
 
     .project-item {
       @include box-sizing(border-box);
-      margin-bottom: 80px;
+      border-bottom: 1px solid #e5e5e5;
+      margin-bottom: 50px;
+      padding-bottom: 50px;
       overflow: hidden;
+
+      &:last-child {
+        border-bottom: none;
+        margin-bottom: 25px;
+      }
     }
 
       .project-img-container {

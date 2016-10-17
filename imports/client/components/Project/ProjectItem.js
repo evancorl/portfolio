@@ -14,7 +14,7 @@ class ProjectItem extends React.Component {
     const { project } = this.props;
 
     return (
-      <div className="project-item">
+      <li className="project-item">
         <a href={project.url || poeticUrl} target="_blank" className="project-img-container">
           <div className="project-img-overlay"></div>
           <img className="project-img" src={project.image} />
@@ -28,7 +28,7 @@ class ProjectItem extends React.Component {
             {project.url ? 'View' : <BuildingWithPoetic />}
           </a>
         </div>
-      </div>
+      </li>
     );
   }
 }

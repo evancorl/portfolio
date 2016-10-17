@@ -14,9 +14,7 @@ class ProjectList extends React.Component {
     return (
       <ul className="project-list">
         {projects.map((project, i) => (
-          <li key={i}>
-            <ProjectItem project={project} />
-          </li>   
+          <ProjectItem key={i} project={project} />
         ))}
       </ul>
     );
