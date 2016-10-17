@@ -22,3 +22,10 @@
     color: #fff;
     text-transform: uppercase;
   }
+
+@include breakpoint($breakpoint-single-col) {
+  .main-menu-logo {
+    display: inline-block;
+    float: none;
+  }
+}

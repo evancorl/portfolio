@@ -7,6 +7,18 @@ $border-menu-item: 3px;
   height: 100%;
 }
 
+  .main-menu-hamburger {
+    cursor: pointer;
+    display: none;
+    color: #f0f0f0;
+    line-height: $height-header;
+    padding: 0 20px;
+    position: absolute;
+    font-size: 25px;
+    right: 0;
+    top: 0;
+  }
+
   .main-menu-list {
     float: right;
     width: 555px;
@@ -30,21 +42,50 @@ $border-menu-item: 3px;
       }
     }
 
-      .main-menu-cta {
-        @include align-items(center);
-        @include display-flex(inline-flex);
-        float: right;
-        height: $height-header;
-        margin: 0 0 0 15px;
+    .main-menu-cta {
+      @include align-items(center);
+      @include display-flex(inline-flex);
+      float: right;
+      height: $height-header;
+      margin: 0 0 0 15px;
+    }
+
+      .main-menu-cta-btn {
+        font-size: 16px;
+        margin-left: auto;
       }
 
-        .main-menu-cta-btn {
-          font-size: 16px;
-          margin-left: auto;
-        }
-
 @include breakpoint($breakpoint-single-col) {
-  .main-menu-list {
-    display: none;
+  .main-menu {
+    text-align: center;
   }
+
+    .main-menu-hamburger {
+      display: block;
+    }
+
+    .main-menu-list {
+      @include header-dark-theme;
+      float: none;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: $height-header;
+      width: 100%;
+    }
+
+      .main-menu-item {
+        float: none;
+        text-align: center;
+        width: 100%;
+
+        a {
+          display: block;
+        }
+      }
+
+      .main-menu-cta {
+        float: none;
+        margin: 0 0 10px 0;
+      }
 }
