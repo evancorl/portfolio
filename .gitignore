@@ -1,4 +1,4 @@
 node_modules/
 settings.json
 .sass-cache
-css
+npm-debug.log
