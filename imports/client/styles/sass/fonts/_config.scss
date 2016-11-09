@@ -1,22 +1,5 @@
-// *  *  *  *  *  *  CONFIG FONT FACES  *  *  *  *  *  * //
+// *  *  *  *  *  *  ICONS FONT  *  *  *  *  *  * //
 
-@mixin google-font-face($family, $name, $weight, $url) {
-  @font-face {
-    font-family: $family;
-    font-style: normal;
-    font-weight: $weight;
-    src: url($url) format('woff'); // local($name), local($family)
-    // Latin characters
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;  
-  }
-}
-
-// Google Fonts Roboto source: https://fonts.googleapis.com/css?family=Roboto:400,500,100
-@include google-font-face('Roboto', 'Roboto-Regular', 400, 'http://themes.googleusercontent.com/static/fonts/roboto/v10/2UX7WLTfW3W8TclTUvlFyQ.woff');
-@include google-font-face('Roboto', 'Roboto-Light', 100, 'http://themes.googleusercontent.com/static/fonts/roboto/v10/vzIUHo9z-oJ4WgkpPOtg1_esZW2xOQ-xsNqO47m55DA.woff');
-@include google-font-face('Roboto', 'Roboto-Medium', 500, 'http://themes.googleusercontent.com/static/fonts/roboto/v10/RxZJdnzeo3R5zSexge8UUT8E0i7KZn-EPnyo3HZu7kw.woff');
-
-// Icons font
 @font-face {
   font-family: 'icons';
   src: url('fonts/icons/icons.eot');
