@@ -17,8 +17,8 @@ const renderRoutes = () => {
       <Route path="/" component={AppContainer}>
         <IndexRoute component={AboutPage} />
         {route('home', AboutPage)}
-        {route('*', NotFoundPage)}
       </Route>
+      {route('*', NotFoundPage)}
     </Router>,
     document.getElementById('react-root')
   );
