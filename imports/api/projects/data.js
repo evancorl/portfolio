@@ -4,14 +4,14 @@ const projects = [
     image: '/images/projects/youtrade.png',
     description: 'A real-time hybrid app that sends stock market tips to paying subscribers.',
     languages: ['HTML', 'CSS', 'JavaScript (ES6)'],
-    tools: ['Meteor', 'React', 'Mongo', 'Sass', 'Atmosphere', 'NPM'],
+    tools: ['Node', 'Meteor', 'React', 'Mongo', 'Sass', 'Atmosphere', 'NPM'],
   },
   {
     name: 'Camden Living',
     image: '/images/projects/camden-living.png',
     description: 'A Houston-based real estate investment company that owns and operates over 150 properties.',
     languages: ['HTML', 'CSS', 'JavaScript (ES6)', 'PHP'],
-    tools: ['Drupal', 'Express', 'Meteor', 'React', 'Mongo', 'Google Maps', 'NPM'],
+    tools: ['Drupal', 'Node', 'Meteor', 'React', 'Mongo', 'Google Maps', 'NPM'],
     url: 'http://www.camdenliving.com/',
   },
   {
