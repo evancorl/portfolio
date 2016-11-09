@@ -9,8 +9,8 @@ class AboutBand extends React.Component {
   }
 
   render() {
-    const languages = ['HTML', 'CSS', 'JavaScript', 'C#', 'PHP', 'SQL'];
-    const tools = ['Meteor', 'React', 'Sass', 'ASP.NET', 'Mongo', 'MySQL'];
+    const languages = ['HTML', 'CSS', 'JavaScript', 'C#', 'SQL', 'PHP'];
+    const tools = ['Meteor', 'React', 'Sass', 'ASP.NET', 'MySQL', 'Mongo'];
 
     return (
       <ScrollElement name="about" id="about" className="about-band inner-ver">
@@ -18,12 +18,12 @@ class AboutBand extends React.Component {
           <div className="col-wide">
             <h1 className="about-title">About</h1>
             <p className="about-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-              dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-              mollit anim id est laborum.
+              I'm a full-stack developer and problem solver based in Houston, TX. I've been coding 
+              since I made my first static website at age 13 to post skateboarding photos of my 
+              friends. My experience includes writing core application logic for the back-end, 
+              building and communicating with REST APIs, database migration, front-end development 
+              using JavaScript view libraries, and much more. My mission is to continually hone my 
+              coding skills by learning every day and applying best practices.
             </p>
             <h2 className="about-subtitle">My favorite languages</h2>
             <ul className="language-list about-list">
