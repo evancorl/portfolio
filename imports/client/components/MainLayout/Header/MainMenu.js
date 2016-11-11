@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router';
 import Scroll from 'react-scroll';
 
 import MainMenuItem from './MainMenuItem';
@@ -55,7 +54,13 @@ class MainMenu extends React.Component {
             />
           ))}
           <li className="main-menu-cta">
-            <Link to="/files/resume.pdf" className="main-menu-cta-btn button red">Resume</Link>
+            <a
+              href="/files/resume-evan-corl.pdf"
+              className="main-menu-cta-btn button red"
+              download
+            >
+              Resume
+            </a>
           </li>
         </ul>
       </nav>
