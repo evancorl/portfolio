@@ -10,7 +10,6 @@ class Footer extends React.Component {
   }
 
   render() {
-    const emailAddress = 'info@evancorl.com';
     const siteUrl = Meteor.absoluteUrl.defaultOptions.rootUrl;
     const siteTitle = encodeURI('Evan Corl | Houston Web and App Developer');
 
@@ -24,7 +23,6 @@ class Footer extends React.Component {
     const connectList = {
       LinkedIn: 'https://www.linkedin.com/in/evan-corl-84b3a762',
       GitHub: 'https://github.com/evancorl',
-      Email: `mailto:${emailAddress}`,
     };
 
     return (
