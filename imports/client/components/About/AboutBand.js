@@ -18,11 +18,11 @@ class AboutBand extends React.Component {
           <div className="col-wide">
             <h1 className="about-title">About</h1>
             <p className="about-text">
-              I'm a full-stack developer and problem solver based in Houston, TX. I've been coding 
-              since I made my first static website at age 13 to post skateboarding photos of my 
-              friends. My experience includes writing core application logic for the back-end, 
-              building and communicating with REST APIs, database migration, front-end development 
-              using JavaScript view libraries, and much more. My mission is to continually hone my 
+              I'm a full-stack web and hybrid app developer based in Houston, TX. I made my first 
+              website at age 13 to post skateboarding photos of my friends, and I've been coding 
+              ever since. My experience includes writing core application logic for the back-end, 
+              building REST APIs, database modeling/migration, front-end development using 
+              JavaScript view libraries, and much more. My mission is to continually hone my 
               coding skills by learning every day and applying best practices.
             </p>
             <h2 className="about-subtitle">My favorite languages</h2>
